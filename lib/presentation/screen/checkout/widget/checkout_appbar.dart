@@ -10,13 +10,12 @@ class CheckoutAppbar extends StatelessWidget with PreferredSizeWidget {
     return AppBar(
       toolbarHeight: 100.h,
       elevation: 0,
-      centerTitle: false,
+      centerTitle: true,
       leadingWidth: 0,
       title: Column(
         children: [
           SizedBox(height: 15.h),
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               InkWell(
                 onTap: () {
