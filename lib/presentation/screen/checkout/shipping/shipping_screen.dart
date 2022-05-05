@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:furniture_ui/domain/model/model.dart';
+import 'package:furniture_ui/presentation/screen/cart/widget/order_text.dart';
 import 'package:furniture_ui/presentation/screen/checkout/widget/address_card_list.dart';
 import 'package:furniture_ui/presentation/screen/checkout/widget/checkout_appbar.dart';
 import 'package:furniture_ui/presentation/screen/checkout/widget/delivery_list.dart';
@@ -65,6 +66,20 @@ class ShippingScreen extends StatelessWidget {
                   ),
                   SizedBox(
                     height: 32.h,
+                  ),
+                  SizedBox(
+                    height: 21.h,
+                  ),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width,
+                    child: Divider(
+                      color: Color(0xFFCCCCCC),
+                      thickness: 1,
+                    ),
+                  ),
+                  OrderText(text1: 'Total', text2: '#420.69'),
+                  SizedBox(
+                    height: 10.h,
                   ),
                   AuthButton(text: 'Continue', press: () {})
                 ],
