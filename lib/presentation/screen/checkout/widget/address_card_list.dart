@@ -12,7 +12,6 @@ class AddressCardlist extends StatefulWidget {
 }
 
 class _AddressCardlistState extends State<AddressCardlist> {
-  int selected = 0;
   int selected_Position = 0;
   @override
   Widget build(BuildContext context) {

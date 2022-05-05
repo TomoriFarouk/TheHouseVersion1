@@ -13,12 +13,10 @@ class Deliverylist extends StatefulWidget {
 }
 
 class _DeliverylistState extends State<Deliverylist> {
-  int selected = 0;
-
+  int selected_Position = 0;
   @override
   Widget build(BuildContext context) {
     double WIDTH = MediaQuery.of(context).size.width;
-    widget.delivery[selected].isSelected == true;
     return SingleChildScrollView(
       child: SizedBox(
         child: ListView.builder(
@@ -26,29 +24,20 @@ class _DeliverylistState extends State<Deliverylist> {
             itemCount: widget.delivery.length,
             itemBuilder: (context, index) {
               return InkWell(
-                onTap: () {},
+                onTap: () {
+                  selected_Position = index;
+                  setState(() {});
+                },
                 child: SizedBox(
                     height: 100,
                     child: Row(
                       // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Container(
-                          height: 20,
-                          width: 20,
-                          decoration: BoxDecoration(
-                              border: Border.all(
-                                color: widget.delivery[index].isSelected == true ? ColorManager.primaryColor : ColorManager.circleColor,
-                                width: 2,
-                              ),
-                              shape: BoxShape.circle),
-                          child: Center(
-                            child: Container(
-                              height: 8.57,
-                              width: 8.57,
-                              decoration: BoxDecoration(color: widget.delivery[index].isSelected == true ? ColorManager.primaryColor : ColorManager.circleColor, shape: BoxShape.circle),
-                            ),
-                          ),
+                        Icon(
+                          (index == selected_Position) ? Icons.radio_button_checked : Icons.radio_button_unchecked,
+                          color: (index == selected_Position) ? ColorManager.goldColor : ColorManager.disableColor,
+                          size: 20,
                         ),
                         SizedBox(
                           width: 14.w,
