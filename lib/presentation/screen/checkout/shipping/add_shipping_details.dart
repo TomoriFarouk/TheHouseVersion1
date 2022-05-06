@@ -16,6 +16,7 @@ class AddShippingScreen extends StatelessWidget {
           child: Column(
             children: [
               StepperTab(selectedIdex: 1),
+              SizedBox(height: 53.h),
               ShippingAddress(),
             ],
           ),
