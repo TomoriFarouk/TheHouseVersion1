@@ -102,23 +102,23 @@ class _ShippingAddressState extends State<ShippingAddress> {
                   width: 8.w,
                 ),
                 BodyText(text: 'Set as default shipping address', size: 14),
-                SizedBox(
-                  height: 100.h,
-                ),
-                SizedBox(
-                  width: MediaQuery.of(context).size.width,
-                  child: Divider(
-                    color: Color(0xFFCCCCCC),
-                    thickness: 1,
-                  ),
-                ),
-                OrderText(text1: 'Total', text2: '#420.69'),
-                SizedBox(
-                  height: 10.h,
-                ),
-                AuthButton(text: 'Continue', press: () {})
               ],
             ),
+            SizedBox(
+              height: 100.h,
+            ),
+            SizedBox(
+              width: MediaQuery.of(context).size.width,
+              child: Divider(
+                color: Color(0xFFCCCCCC),
+                thickness: 1,
+              ),
+            ),
+            OrderText(text1: 'Total', text2: '#420.69'),
+            SizedBox(
+              height: 10.h,
+            ),
+            AuthButton(text: 'Continue', press: () {})
           ],
         ),
       ),
