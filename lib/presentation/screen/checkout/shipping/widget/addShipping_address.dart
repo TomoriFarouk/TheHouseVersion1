@@ -25,9 +25,9 @@ class _ShippingAddressState extends State<ShippingAddress> {
               text: 'Personal Infornmation',
               Size: 16,
             ),
-            SizedBox(height: 17.h),
+            SizedBox(height: 25.h),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
@@ -63,7 +63,7 @@ class _ShippingAddressState extends State<ShippingAddress> {
             ),
             SizedBox(height: 17.h),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
