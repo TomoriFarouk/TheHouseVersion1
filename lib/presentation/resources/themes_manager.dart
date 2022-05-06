@@ -91,19 +91,19 @@ ThemeData getApplicationTheme() {
       errorStyle: getRegularStyle(color: ColorManager.error),
       enabledBorder: OutlineInputBorder(
         borderSide: BorderSide(color: ColorManager.borderColor, width: AppSize.s1_5),
-        borderRadius: BorderRadius.all(Radius.circular(AppSize.s8)),
+        borderRadius: BorderRadius.all(Radius.circular(AppSize.s12)),
       ),
       focusedBorder: OutlineInputBorder(
         borderSide: BorderSide(color: ColorManager.goldColor, width: AppSize.s1_5),
-        borderRadius: BorderRadius.all(Radius.circular(AppSize.s8)),
+        borderRadius: BorderRadius.all(Radius.circular(AppSize.s12)),
       ),
       errorBorder: OutlineInputBorder(
         borderSide: BorderSide(color: ColorManager.error, width: AppSize.s1_5),
-        borderRadius: BorderRadius.all(Radius.circular(AppSize.s8)),
+        borderRadius: BorderRadius.all(Radius.circular(AppSize.s12)),
       ),
       focusedErrorBorder: OutlineInputBorder(
         borderSide: BorderSide(color: ColorManager.primaryColor, width: AppSize.s1_5),
-        borderRadius: BorderRadius.all(Radius.circular(AppSize.s8)),
+        borderRadius: BorderRadius.all(Radius.circular(AppSize.s12)),
       ),
     ),
   );
