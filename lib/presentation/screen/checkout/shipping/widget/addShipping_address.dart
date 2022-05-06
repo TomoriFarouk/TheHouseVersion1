@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:furniture_ui/presentation/screen/cart/widget/order_text.dart';
 import 'package:furniture_ui/presentation/widget/build_form.dart';
 import 'package:furniture_ui/presentation/widget/widget.dart';
 
@@ -100,7 +101,22 @@ class _ShippingAddressState extends State<ShippingAddress> {
                 SizedBox(
                   width: 8.w,
                 ),
-                BodyText(text: 'Set as default shipping address', size: 14)
+                BodyText(text: 'Set as default shipping address', size: 14),
+                SizedBox(
+                  height: 100.h,
+                ),
+                SizedBox(
+                  width: MediaQuery.of(context).size.width,
+                  child: Divider(
+                    color: Color(0xFFCCCCCC),
+                    thickness: 1,
+                  ),
+                ),
+                OrderText(text1: 'Total', text2: '#420.69'),
+                SizedBox(
+                  height: 10.h,
+                ),
+                AuthButton(text: 'Continue', press: () {})
               ],
             ),
           ],
