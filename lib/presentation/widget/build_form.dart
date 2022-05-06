@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class BuildForm extends StatelessWidget {
   final String labelText;
@@ -9,11 +10,14 @@ class BuildForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextFormField(
-      keyboardType: keyboardType,
-      decoration: InputDecoration(
-        labelText: labelText,
-        hintText: hintText,
+    return Container(
+      height: 70.h,
+      child: TextFormField(
+        keyboardType: keyboardType,
+        decoration: InputDecoration(
+          labelText: labelText,
+          hintText: hintText,
+        ),
       ),
     );
   }

@@ -32,7 +32,6 @@ class _ShippingAddressState extends State<ShippingAddress> {
               children: [
                 Container(
                   width: 175.w,
-                  height: 70.h,
                   child: BuildForm(
                     hintText: 'Firstname',
                     labelText: 'Name',
