@@ -11,7 +11,6 @@ class BuildForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 70.h,
       child: TextFormField(
         keyboardType: keyboardType,
         decoration: InputDecoration(
