@@ -105,7 +105,7 @@ class _ShippingAddressState extends State<ShippingAddress> {
               ],
             ),
             SizedBox(
-              height: 100.h,
+              height: 143.h,
             ),
             SizedBox(
               width: MediaQuery.of(context).size.width,
