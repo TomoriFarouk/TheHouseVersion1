@@ -45,7 +45,7 @@ class _ContactInfoState extends State<ContactInfo> {
                 SizedBox(
                   width: 8.w,
                 ),
-                BodyText(text: 'Yes, I want to recieve emails and offers', Size: 14)
+                BodyText(text: 'Yes, I want to recieve emails and offers', size: 14)
               ],
             ),
           ],
