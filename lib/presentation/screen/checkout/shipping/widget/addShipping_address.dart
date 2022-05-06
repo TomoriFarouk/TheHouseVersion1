@@ -19,7 +19,6 @@ class _ShippingAddressState extends State<ShippingAddress> {
         height: MediaQuery.of(context).size.height,
         width: 375.w,
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             TitleText(
