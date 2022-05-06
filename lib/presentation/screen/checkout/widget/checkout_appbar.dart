@@ -28,6 +28,7 @@ class CheckoutAppbar extends StatelessWidget with PreferredSizeWidget {
                   //color: ColorManager.goldColor,
                 ),
               ),
+              SizedBox(width: 130.w),
               TitleText(
                 text: 'Checkout',
                 Size: 20.sp,

@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:furniture_ui/data/generated/l10n.dart';
 import 'package:furniture_ui/domain/model/model.dart';
 import 'presentation/resources/resource.dart';
+import 'presentation/screen/checkout/shipping/add_shipping_details.dart';
 import 'presentation/screen/screen.dart';
 
 void main() {
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
           GlobalMaterialLocalizations.delegate,
           GlobalWidgetsLocalizations.delegate,
           S.delegate
-        ], debugShowCheckedModeBanner: false, title: 'Flutter Demo', onGenerateRoute: RoutesGenerator.getRoute, theme: getApplicationTheme(), home: ShippingScreen()
+        ], debugShowCheckedModeBanner: false, title: 'Flutter Demo', onGenerateRoute: RoutesGenerator.getRoute, theme: getApplicationTheme(), home: AddShippingScreen()
             //IntroPage(
             // introModelList: Splash.splash.toList(),
             //),
