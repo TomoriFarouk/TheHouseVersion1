@@ -16,8 +16,8 @@ class _ShippingAddressState extends State<ShippingAddress> {
   Widget build(BuildContext context) {
     return Form(
       child: SizedBox(
-        height: 356,
-        width: 367.w,
+        height: MediaQuery.of(context).size.height,
+        width: 375.w,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -26,6 +26,7 @@ class _ShippingAddressState extends State<ShippingAddress> {
               text: 'Personal Infornmation',
               Size: 16,
             ),
+            SizedBox(height: 17.h),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -49,16 +50,19 @@ class _ShippingAddressState extends State<ShippingAddress> {
                 )
               ],
             ),
+            SizedBox(height: 17.h),
             BuildForm(
               hintText: 'Home Address',
               labelText: 'Address',
               keyboardType: TextInputType.text,
             ),
+            SizedBox(height: 17.h),
             BuildForm(
               hintText: 'Phone Number',
               labelText: 'Phone',
               keyboardType: TextInputType.number,
             ),
+            SizedBox(height: 17.h),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -81,6 +85,7 @@ class _ShippingAddressState extends State<ShippingAddress> {
                 )
               ],
             ),
+            SizedBox(height: 17.h),
             Row(
               children: [
                 Checkbox(
