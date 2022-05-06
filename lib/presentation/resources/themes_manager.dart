@@ -86,7 +86,7 @@ ThemeData getApplicationTheme() {
     inputDecorationTheme: InputDecorationTheme(
       contentPadding: EdgeInsets.all(20),
       hintStyle: getRegularStyle(color: ColorManager.bodyTextColor),
-      labelStyle: getMediumStyle(color: ColorManager.bodyTextColor),
+      labelStyle: getMediumStyle(color: ColorManager.bodyTextColor, fontSize: 14.sp),
       errorStyle: getRegularStyle(color: ColorManager.error),
       enabledBorder: OutlineInputBorder(
         borderSide: BorderSide(color: ColorManager.borderColor, width: AppSize.s1_5),
