@@ -23,7 +23,7 @@ class _ShippingAddressState extends State<ShippingAddress> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             TitleText(
-              text: 'Shipping Address',
+              text: 'Personal Infornmation',
               Size: 16,
             ),
             Row(
