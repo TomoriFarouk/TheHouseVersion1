@@ -22,7 +22,7 @@ class PaymentScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            StepperTab(selectedIdex: 1),
+            StepperTab(selectedIdex: 2),
             SizedBox(
               height: 48.h,
             ),
@@ -106,6 +106,16 @@ class PaymentScreen extends StatelessWidget {
                           ),
                         ],
                       )),
+                  Align(
+                    alignment: Alignment.topLeft,
+                    child: TitleText(
+                      text: 'Payment Method',
+                      Size: 16,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 24.h,
+                  ),
                   Container(
                     child: PaymentCardList(
                       payment: Payment.payment.toList(),
