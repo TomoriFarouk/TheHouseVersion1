@@ -3,6 +3,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:furniture_ui/data/generated/l10n.dart';
 import 'package:furniture_ui/domain/model/model.dart';
+import 'package:furniture_ui/presentation/screen/checkout/review/reviewScreen.dart';
 import 'presentation/resources/resource.dart';
 import 'presentation/screen/checkout/payment/payment_screen.dart';
 import 'presentation/screen/checkout/shipping/add_shipping_details.dart';
@@ -32,7 +33,8 @@ class MyApp extends StatelessWidget {
           title: 'Flutter Demo',
           onGenerateRoute: RoutesGenerator.getRoute,
           theme: getApplicationTheme(),
-          home: PaymentScreen(),
+          home: ReviewScreen(),
+          //PaymentScreen(),
           //AddShippingScreen(),,
           //IntroPage(
           // introModelList: Splash.splash.toList(),

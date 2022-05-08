@@ -22,8 +22,8 @@ class CartPage extends StatelessWidget {
                     height: 430.h,
                     child: Column(
                       children: [
-                        CartCard(),
-                        CartCard(),
+                        CartCard(check: false),
+                        CartCard(check: false),
                         // CartCard(),
                       ],
                     ),
@@ -54,16 +54,7 @@ class CartPage extends StatelessWidget {
                         OrderText(text1: 'items Subtotal', text2: '#420.69'),
                         AuthButton(
                           text: 'Proceed to checkout',
-                          press: () {
-                            // if (_formKey.currentState!.validate()) {
-                            //   _formKey.currentState!.save();
-                            //   // if all are valid then go to success screen
-                            //   //  KeyboardUtil.hideKeyboard(context);
-
-                            //   PrefData.setIsSignIn(true);
-                            //   Navigator.pushReplacementNamed(context, Routes.tabRoute);
-                            // }
-                          },
+                          press: () {},
                         ),
                       ]))
                 ]))

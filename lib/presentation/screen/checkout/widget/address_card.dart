@@ -31,7 +31,7 @@ class _AddressCardState extends State<AddressCard> {
             SizedBox(width: 14.w),
             Expanded(
               child: Container(
-                height: 100,
+                height: 130,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -54,7 +54,39 @@ class _AddressCardState extends State<AddressCard> {
                       Text(','),
                       BodyText(text: widget.address.country, size: 14),
                     ]),
-                    BodyText(text: widget.address.phonenumber.toString(), size: 14)
+                    BodyText(text: widget.address.phonenumber.toString(), size: 14),
+                    Row(
+                      children: [
+                        Container(
+                          height: 26.h,
+                          width: 100.w,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(32),
+                            color: Color(0x1AD5B65B),
+                          ),
+                          child: Text(
+                            'Home address',
+                            style: Theme.of(context).textTheme.headline1!.copyWith(
+                                  fontSize: 12.sp,
+                                  color: ColorManager.goldColor,
+                                ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                        SizedBox(width: 16.w),
+                        Container(
+                          height: 20.h,
+                          decoration: BoxDecoration(
+                              border: Border(
+                            bottom: BorderSide(color: Color(0xFFCCCCCC), width: 2),
+                          )),
+                          child: TitleText(
+                            text: 'Remove',
+                            Size: 12.sp,
+                          ),
+                        ),
+                      ],
+                    ),
                   ],
                 ),
               ),
@@ -67,7 +99,7 @@ class _AddressCardState extends State<AddressCard> {
               child: Text(
                 'Edit',
                 style: Theme.of(context).textTheme.bodyText2!.copyWith(
-                      color: Color(0xFF8D9091),
+                      color: Color(0x1AD5B65B),
                       fontSize: 14.sp,
                     ),
               ),

@@ -114,7 +114,7 @@ class _PaymentCardListState extends State<PaymentCardList> {
               child: Text(
                 'Edit',
                 style: Theme.of(context).textTheme.bodyText2!.copyWith(
-                      color: Color(0xFF8D9091),
+                      color: Color(0x1AD5B65B),
                       fontSize: 14.sp,
                     ),
               ),

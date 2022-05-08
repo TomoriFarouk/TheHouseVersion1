@@ -1,20 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:furniture_ui/domain/model/model.dart';
 import 'package:furniture_ui/presentation/resources/resource.dart';
+import 'package:furniture_ui/presentation/screen/cart/widget/cart_card.dart';
 import 'package:furniture_ui/presentation/screen/cart/widget/order_text.dart';
-import 'package:furniture_ui/presentation/screen/checkout/widget/address_card_list.dart';
 import 'package:furniture_ui/presentation/screen/checkout/widget/checkout_appbar.dart';
-import 'package:furniture_ui/presentation/screen/checkout/widget/delivery_list.dart';
-import 'package:furniture_ui/presentation/screen/checkout/widget/payment_card_list.dart';
 import 'package:furniture_ui/presentation/widget/widget.dart';
 
 import '../widget/stepper_tab.dart';
-import 'widget/external_payment_list.dart';
 
-class PaymentScreen extends StatelessWidget {
-  const PaymentScreen();
+
+class ReviewScreen extends StatefulWidget {
+  const ReviewScreen();
+
+  @override
+  State<ReviewScreen> createState() => _ReviewScreenState();
+}
+
+class _ReviewScreenState extends State<ReviewScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,14 +35,14 @@ class PaymentScreen extends StatelessWidget {
               ),
               child: Column(
                 children: [
-                  Align(
+                   Align(
                     alignment: Alignment.topLeft,
                     child: TitleText(
                       text: 'Please confirm and submit your order',
                       Size: 16,
                     ),
                   ),
-                  SizedBox(
+                   SizedBox(
                     height: 24.h,
                   ),
                   Align(
@@ -62,7 +64,7 @@ class PaymentScreen extends StatelessWidget {
                           SizedBox(width: 14.w),
                           Expanded(
                             child: Container(
-                              height: 100,
+                              height: 130,
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
@@ -96,7 +98,23 @@ class PaymentScreen extends StatelessWidget {
                                   BodyText(
                                     text: '0123 456 7890', //address.phonenumber.toString(),
                                     size: 14,
-                                  )
+                                  ),
+                                   Container(
+                          height: 26.h,
+                          width: 100.w,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(32),
+                            color: Color(0x1AD5B65B),
+                          ),
+                          child: Text(
+                            'Home address',
+                            style: Theme.of(context).textTheme.headline1!.copyWith(
+                                  fontSize: 12.sp,
+                                  color: ColorManager.goldColor,
+                                ),
+                                textAlign: TextAlign.center,
+                          ),
+                        ),
                                 ],
                               ),
                             ),
@@ -107,9 +125,9 @@ class PaymentScreen extends StatelessWidget {
                               Navigator.pushNamed(context, '');
                             },
                             child: Text(
-                              'Edit',
+                              'Change',
                               style: Theme.of(context).textTheme.bodyText2!.copyWith(
-                                    color: Color(0xFF8D9091),
+                                    color: Color(0x1AD5B65B),
                                     fontSize: 14.sp,
                                   ),
                             ),
@@ -127,57 +145,81 @@ class PaymentScreen extends StatelessWidget {
                     height: 24.h,
                   ),
                   Container(
-                    child: PaymentCardList(
-                      payment: Payment.payment.toList(),
+                    child: paymentMethod(
+                      text: 'Maurice Umoh',
+                      text2:'Visa card ending in 4909',
                     ),
                   ),
-                  Row(
-                    children: [
-                      IconButton(icon: Icon(Icons.add), onPressed: () {}),
-                      SizedBox(width: 16.w),
-                      TitleText(text: 'Add address', Size: 14)
-                    ],
+                   SizedBox(
+                    height: 16.h,
+                  ),
+                 Container(
+                    child: paymentMethod(
+                      text: 'Billing address',
+                      text2:'Same as shipping address',
+                    ),
+                  ),
+                 SizedBox(
+                    height: 24.h,
+                  ),
+                 Align(
+                    alignment: Alignment.topLeft,
+                    child: TitleText(
+                      text: 'Item details',
+                      Size: 16,
+                    ),
                   ),
                   SizedBox(
-                    height: 34.h,
+                    height: 16.h,
                   ),
+                   CartCard(check:true),
+                  SizedBox(height: 8.h),
+                    Align(
+                    alignment: Alignment.topLeft,
+                    child: TitleText(
+                      text: 'Your Order',
+                      Size: 16,
+                    ),
+                  ),
+                  SizedBox(
+                    child: Column(children: [
+                  SizedBox(height: 30.h),
                   Container(
-                    child: ExternalPaymentList(
-                      payment: ExternalPayment.payment.toList(),
+                    height: 136.h,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                      
+                        OrderText(text1: 'Subtotal', text2: '#420.69'),
+                        OrderText(text1: 'Shipping', text2: '#420.69'),
+                        OrderText(text1: 'Total', text2: '#420.69'),
+                      ],
                     ),
                   ),
-                  SizedBox(
-                    height: 26.h,
-                  ),
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      paymentCard(
-                        svgIcon: 'assets/icons/Apple.svg',
-                        text: 'Apple Pay',
-                        color: Color(0xFF8D9091),
+                   Padding(
+                     padding: EdgeInsets.only(top:34.h,bottom:22.h,),
+                     child: SizedBox(
+                      width: MediaQuery.of(context).size.width,
+                      child: Divider(
+                        color: Color(0xFFCCCCCC),
+                        thickness: 1,
                       ),
-                      paymentCard(
-                        svgIcon: 'assets/icons/google.svg',
-                        text: 'Google Pay',
-                        color: Color(0x1AD5B65B),
-                      )
-                    ],
                   ),
-                  SizedBox(height: 61.h),
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width,
-                    child: Divider(
-                      color: Color(0xFFCCCCCC),
-                      thickness: 1,
-                    ),
-                  ),
-                  OrderText(text1: 'Total', text2: '#420.69'),
-                  SizedBox(
-                    height: 10.h,
-                  ),
-                  AuthButton(text: 'Continue', press: () {})
+                   ),
+                  Container(
+                      height: 130.h,
+                      child: Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+                        OrderText(text1: 'items Subtotal', text2: '#420.69'),
+                        AuthButton(
+                          text: 'Make Payment',
+                          press: () {
+                           
+                          },
+                        ),
+                      ]))
+                ]))
+                  ,
                 ],
               ),
             )
@@ -187,30 +229,47 @@ class PaymentScreen extends StatelessWidget {
     );
   }
 
-  Widget paymentCard({String? svgIcon, String? text, Color? color}) {
-    return Container(
-      width: 175.w,
-      height: 58,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(12),
-        color: color,
-      ),
-      child: Padding(
-        padding: EdgeInsets.only(left: 42.w),
+   Widget paymentMethod( {String? text,String? text2}) {
+    return SizedBox(
+        height: 50,
         child: Row(
+          // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SvgPicture.asset(
-              svgIcon!,
-              height: 24.w,
-              color: text == 'Apple Pay' ? ColorManager.primaryColor : ColorManager.goldColor,
+           
+          
+            Expanded(
+              child: Container(
+                height: 50,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    TitleText(
+                      text: text!,
+                      Size: 16,
+                    ),
+                    BodyText(text: text2!, size: 14),
+                   
+                   
+                  ],
+                ),
+              ),
             ),
-            SizedBox(
-              width: 12.w,
+            TextButton(
+              style: TextButton.styleFrom(primary: Colors.black),
+              onPressed: () {
+                Navigator.pushNamed(context, '');
+              },
+              child: Text(
+                'Change',
+                style: Theme.of(context).textTheme.bodyText2!.copyWith(
+                      color: Color(0x1AD5B65B),
+                      fontSize: 14.sp,
+                    ),
+              ),
             ),
-            BodyText(text: text!, size: 14.sp)
           ],
-        ),
-      ),
-    );
+        ));
   }
 }

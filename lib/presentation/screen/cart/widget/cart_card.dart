@@ -5,6 +5,8 @@ import 'package:furniture_ui/presentation/resources/resource.dart';
 import 'package:furniture_ui/presentation/widget/widget.dart';
 
 class CartCard extends StatelessWidget {
+  final bool check;
+  CartCard({required this.check});
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -87,65 +89,73 @@ class CartCard extends StatelessWidget {
               ],
             ),
             SizedBox(width: 119.w),
-            Container(
-              height: 20.h,
-              decoration: BoxDecoration(
-                  border: Border(
-                bottom: BorderSide(color: Color(0xFFCCCCCC), width: 2),
-              )),
-              child: TitleText(
-                text: 'Remove',
-                Size: 12.sp,
-              ),
-            ),
+            check
+                ? Container(
+                    height: 20.h,
+                    decoration: BoxDecoration(
+                        border: Border(
+                      bottom: BorderSide(color: Color(0xFFCCCCCC), width: 2),
+                    )),
+                    child: TitleText(
+                      text: 'Remove',
+                      Size: 12.sp,
+                    ),
+                  )
+                : Container(),
             SizedBox(width: 24.w),
-            Container(
-              height: 20.h,
-              decoration: BoxDecoration(
-                  border: Border(
-                bottom: BorderSide(color: Color(0xFFCCCCCC), width: 2),
-              )),
-              child: TitleText(
-                text: 'Save for later',
-                Size: 12.sp,
-              ),
-            )
+            check
+                ? Container(
+                    height: 20.h,
+                    decoration: BoxDecoration(
+                        border: Border(
+                      bottom: BorderSide(color: Color(0xFFCCCCCC), width: 2),
+                    )),
+                    child: TitleText(
+                      text: 'Save for later',
+                      Size: 12.sp,
+                    ),
+                  )
+                : Container(),
           ]),
           SizedBox(height: 8.h),
-          Container(
-              height: 54.h,
-              decoration: BoxDecoration(borderRadius: BorderRadius.circular(8), color: Color(0x1AD5B65B)),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
+          check
+              ? Container(
+                  height: 54.h,
+                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(8), color: Color(0x1AD5B65B)),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      TitleText(
-                        text: 'Estimated Delivery',
-                        Size: 12.sp,
+                      Row(
+                        children: [
+                          TitleText(
+                            text: 'Estimated Delivery',
+                            Size: 12.sp,
+                          ),
+                          Text(':'),
+                          TitleText(
+                            text: '24 April',
+                            Size: 12.sp,
+                          ),
+                        ],
                       ),
-                      Text(':'),
                       TitleText(
-                        text: '24 April',
+                        text: 'Shipping Tomorrow',
                         Size: 12.sp,
                       ),
                     ],
-                  ),
-                  TitleText(
-                    text: 'Shipping Tomorrow',
-                    Size: 12.sp,
-                  ),
-                ],
-              )),
+                  ))
+              : Container(),
           SizedBox(height: 16.h),
-          SizedBox(
-            // width: getProportionateScreenWidth(145, WIDTH),
-            child: Divider(
-              color: Color(0xFFCCCCCC),
-              thickness: 2,
-            ),
-          ),
+          check
+              ? SizedBox(
+                  // width: getProportionateScreenWidth(145, WIDTH),
+                  child: Divider(
+                    color: Color(0xFFCCCCCC),
+                    thickness: 2,
+                  ),
+                )
+              : SizedBox(),
         ],
       ),
     );
