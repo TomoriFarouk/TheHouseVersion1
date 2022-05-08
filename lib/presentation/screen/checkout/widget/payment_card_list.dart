@@ -68,7 +68,38 @@ class _PaymentCardListState extends State<PaymentCardList> {
                       Size: 16,
                     ),
                     BodyText(text: payment.exp, size: 14),
-                    BodyText(text: payment.endingDate, size: 14)
+                    BodyText(text: payment.endingDate, size: 14),
+                    SizedBox(height: 16.h),
+                    Row(
+                      children: [
+                        Container(
+                          height: 26.h,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(32),
+                            color: Color(0x1AD5B65B),
+                          ),
+                          child: Text(
+                            'Default',
+                            style: Theme.of(context).textTheme.headline1!.copyWith(
+                                  fontSize: 12.sp,
+                                  color: ColorManager.goldColor,
+                                ),
+                          ),
+                        ),
+                        SizedBox(width: 16.w),
+                        Container(
+                          height: 20.h,
+                          decoration: BoxDecoration(
+                              border: Border(
+                            bottom: BorderSide(color: Color(0xFFCCCCCC), width: 2),
+                          )),
+                          child: TitleText(
+                            text: 'Remove',
+                            Size: 12.sp,
+                          ),
+                        ),
+                      ],
+                    ),
                   ],
                 ),
               ),

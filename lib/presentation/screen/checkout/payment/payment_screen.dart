@@ -55,7 +55,6 @@ class PaymentScreen extends StatelessWidget {
                               height: 100,
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
-                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                 children: [
                                   Row(
                                     children: [
@@ -107,7 +106,11 @@ class PaymentScreen extends StatelessWidget {
                           ),
                         ],
                       )),
-                  Container(child: PaymentCardList(payment: Payment.payment.toList())),
+                  Container(
+                    child: PaymentCardList(
+                      payment: Payment.payment.toList(),
+                    ),
+                  ),
                   Row(
                     children: [
                       IconButton(icon: Icon(Icons.add), onPressed: () {}),
@@ -130,8 +133,8 @@ class PaymentScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      paymentCard(svgIcon: 'assets/icons/paypal.svg'),
-                      paymentCard(svgIcon: 'assets/icons/googlepay.svg')
+                      paymentCard(svgIcon: 'assets/icons/Apple.svg'),
+                      paymentCard(svgIcon: 'assets/icons/google.svg')
                     ],
                   ),
                   SizedBox(

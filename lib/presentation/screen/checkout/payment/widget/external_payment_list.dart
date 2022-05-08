@@ -27,7 +27,7 @@ class _ExternalPaymentListState extends State<ExternalPaymentList> {
                   setState(() {});
                 },
                 child: SizedBox(
-                    height: 100,
+                    height: 50,
                     child: Row(
                       // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       crossAxisAlignment: CrossAxisAlignment.start,
