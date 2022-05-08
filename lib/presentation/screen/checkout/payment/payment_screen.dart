@@ -174,13 +174,14 @@ class PaymentScreen extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
         color: color,
       ),
-      child: Center(
+      child: Padding(
+        padding: EdgeInsets.only(left: 42.w),
         child: Row(
           children: [
             SvgPicture.asset(
               svgIcon!,
               height: 24.w,
-              color: ColorManager.goldColor,
+              color: text == 'Apple Pay' ? ColorManager.primaryColor : ColorManager.goldColor,
             ),
             SizedBox(
               width: 12.w,
