@@ -74,6 +74,7 @@ class _PaymentCardListState extends State<PaymentCardList> {
                       children: [
                         Container(
                           height: 26.h,
+                          width: 59.w,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(32),
                             color: Color(0x1AD5B65B),
@@ -89,7 +90,6 @@ class _PaymentCardListState extends State<PaymentCardList> {
                         SizedBox(width: 16.w),
                         Container(
                           height: 20.h,
-                          width: 59.w,
                           decoration: BoxDecoration(
                               border: Border(
                             bottom: BorderSide(color: Color(0xFFCCCCCC), width: 2),
