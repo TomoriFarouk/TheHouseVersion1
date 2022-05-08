@@ -1,25 +1,25 @@
 import 'package:equatable/equatable.dart';
-import 'package:furniture_ui/model/PaymentModel.dart';
 
 class ExternalPayment extends Equatable {
   final String name;
-  final String icon;
+  final String iconUrl;
 
   const ExternalPayment({
     required this.name,
-    required this.icon,
+    required this.iconUrl,
   });
   @override
   // TODO: implement props
   List<Object> get props => [
         name,
-        icon,
+        iconUrl,
       ];
 
   static List<ExternalPayment> payment = [
-    ExternalPayment(name: 'Pay with Paypal', icon: 'assets/icons/Paypal(2).svg'),
+    ExternalPayment(name: 'Pay with Paypal', iconUrl: 'assets/icons/Paypal(2).svg'),
     ExternalPayment(
       name: 'Financing',
+      iconUrl: '',
     ),
   ];
 }
