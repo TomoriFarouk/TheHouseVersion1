@@ -56,7 +56,7 @@ class CartPage extends StatelessWidget {
                         AuthButton(
                           text: 'Proceed to checkout',
                           press: () {
-                            Navigator.pushReplacementNamed(context, Routes.tabRoute);
+                            Navigator.pushReplacementNamed(context, Routes.shippingScreenRoute);
                           },
                         ),
                       ]))
