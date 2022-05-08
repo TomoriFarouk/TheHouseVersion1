@@ -8,7 +8,6 @@ import 'package:furniture_ui/presentation/widget/widget.dart';
 
 import '../widget/stepper_tab.dart';
 
-
 class ReviewScreen extends StatefulWidget {
   const ReviewScreen();
 
@@ -35,14 +34,14 @@ class _ReviewScreenState extends State<ReviewScreen> {
               ),
               child: Column(
                 children: [
-                   Align(
+                  Align(
                     alignment: Alignment.topLeft,
                     child: TitleText(
                       text: 'Please confirm and submit your order',
                       Size: 16,
                     ),
                   ),
-                   SizedBox(
+                  SizedBox(
                     height: 24.h,
                   ),
                   Align(
@@ -99,22 +98,22 @@ class _ReviewScreenState extends State<ReviewScreen> {
                                     text: '0123 456 7890', //address.phonenumber.toString(),
                                     size: 14,
                                   ),
-                                   Container(
-                          height: 26.h,
-                          width: 100.w,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(32),
-                            color: Color(0x1AD5B65B),
-                          ),
-                          child: Text(
-                            'Home address',
-                            style: Theme.of(context).textTheme.headline1!.copyWith(
-                                  fontSize: 12.sp,
-                                  color: ColorManager.goldColor,
-                                ),
-                                textAlign: TextAlign.center,
-                          ),
-                        ),
+                                  Container(
+                                    height: 26.h,
+                                    width: 100.w,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(32),
+                                      color: Color(0x1AD5B65B),
+                                    ),
+                                    child: Text(
+                                      'Home address',
+                                      style: Theme.of(context).textTheme.headline1!.copyWith(
+                                            fontSize: 12.sp,
+                                            color: ColorManager.goldColor,
+                                          ),
+                                      textAlign: TextAlign.center,
+                                    ),
+                                  ),
                                 ],
                               ),
                             ),
@@ -147,22 +146,22 @@ class _ReviewScreenState extends State<ReviewScreen> {
                   Container(
                     child: paymentMethod(
                       text: 'Maurice Umoh',
-                      text2:'Visa card ending in 4909',
+                      text2: 'Visa card ending in 4909',
                     ),
                   ),
-                   SizedBox(
+                  SizedBox(
                     height: 16.h,
                   ),
-                 Container(
+                  Container(
                     child: paymentMethod(
                       text: 'Billing address',
-                      text2:'Same as shipping address',
+                      text2: 'Same as shipping address',
                     ),
                   ),
-                 SizedBox(
+                  SizedBox(
                     height: 24.h,
                   ),
-                 Align(
+                  Align(
                     alignment: Alignment.topLeft,
                     child: TitleText(
                       text: 'Item details',
@@ -172,9 +171,9 @@ class _ReviewScreenState extends State<ReviewScreen> {
                   SizedBox(
                     height: 16.h,
                   ),
-                   CartCard(check:true),
+                  CartCard(check: false),
                   SizedBox(height: 8.h),
-                    Align(
+                  Align(
                     alignment: Alignment.topLeft,
                     child: TitleText(
                       text: 'Your Order',
@@ -182,44 +181,43 @@ class _ReviewScreenState extends State<ReviewScreen> {
                     ),
                   ),
                   SizedBox(
-                    child: Column(children: [
-                  SizedBox(height: 30.h),
-                  Container(
-                    height: 136.h,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                      
-                        OrderText(text1: 'Subtotal', text2: '#420.69'),
-                        OrderText(text1: 'Shipping', text2: '#420.69'),
-                        OrderText(text1: 'Total', text2: '#420.69'),
-                      ],
-                    ),
-                  ),
-                   Padding(
-                     padding: EdgeInsets.only(top:34.h,bottom:22.h,),
-                     child: SizedBox(
-                      width: MediaQuery.of(context).size.width,
-                      child: Divider(
-                        color: Color(0xFFCCCCCC),
-                        thickness: 1,
+                      child: Column(children: [
+                    SizedBox(height: 30.h),
+                    Container(
+                      height: 116.h,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          OrderText(text1: 'Subtotal', text2: '#420.69'),
+                          OrderText(text1: 'Shipping', text2: '#420.69'),
+                          OrderText(text1: 'Total', text2: '#420.69'),
+                        ],
                       ),
-                  ),
-                   ),
-                  Container(
-                      height: 130.h,
-                      child: Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-                        OrderText(text1: 'items Subtotal', text2: '#420.69'),
-                        AuthButton(
-                          text: 'Make Payment',
-                          press: () {
-                           
-                          },
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(
+                        top: 34.h,
+                        bottom: 22.h,
+                      ),
+                      child: SizedBox(
+                        width: MediaQuery.of(context).size.width,
+                        child: Divider(
+                          color: Color(0xFFCCCCCC),
+                          thickness: 1,
                         ),
-                      ]))
-                ]))
-                  ,
+                      ),
+                    ),
+                    Container(
+                        height: 130.h,
+                        child: Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+                          OrderText(text1: 'items Subtotal', text2: '#420.69'),
+                          AuthButton(
+                            text: 'Make Payment',
+                            press: () {},
+                          ),
+                        ]))
+                  ])),
                 ],
               ),
             )
@@ -229,15 +227,13 @@ class _ReviewScreenState extends State<ReviewScreen> {
     );
   }
 
-   Widget paymentMethod( {String? text,String? text2}) {
+  Widget paymentMethod({String? text, String? text2}) {
     return SizedBox(
         height: 50,
         child: Row(
           // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-           
-          
             Expanded(
               child: Container(
                 height: 50,
@@ -250,14 +246,12 @@ class _ReviewScreenState extends State<ReviewScreen> {
                       Size: 16,
                     ),
                     BodyText(text: text2!, size: 14),
-                   
-                   
                   ],
                 ),
               ),
             ),
             TextButton(
-              style: TextButton.styleFrom(primary: Colors.black),
+              //style: TextButton.styleFrom(primary: Colors.black),
               onPressed: () {
                 Navigator.pushNamed(context, '');
               },

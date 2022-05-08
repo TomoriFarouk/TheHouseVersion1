@@ -22,8 +22,8 @@ class CartPage extends StatelessWidget {
                     height: 430.h,
                     child: Column(
                       children: [
-                        CartCard(check: false),
-                        CartCard(check: false),
+                        CartCard(check: true),
+                        CartCard(check: true),
                         // CartCard(),
                       ],
                     ),
