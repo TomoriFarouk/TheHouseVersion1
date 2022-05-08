@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:furniture_ui/domain/model/model.dart';
+import 'package:furniture_ui/domain/model/product/product_reviewModel.dart';
 import 'package:furniture_ui/presentation/resources/resource.dart';
 import 'package:furniture_ui/presentation/screen/product/widget/reviewWidget.dart';
 import 'package:furniture_ui/presentation/widget/widget.dart';
@@ -10,8 +11,12 @@ import 'widget/productReview.dart';
 import 'widget/product_appbar.dart';
 
 class ProductDetails extends StatefulWidget {
-  final List<ProductReview> review;
-  const ProductDetails({required this.review});
+  final Product product;
+  const ProductDetails({required this.product});
+  static Route getRoute({required Product product}) {
+    return MaterialPageRoute(settings: RouteSettings(name: Routes.productDetailRoute), builder: (_) => ProductDetails(product: product));
+  }
+
   _ProductDetailsState createState() => _ProductDetailsState();
 }
 
@@ -23,6 +28,7 @@ class _ProductDetailsState extends State<ProductDetails> {
 
   @override
   Widget build(BuildContext context) {
+    final List<ProductReview> review = ProductReview.reviews.toList();
     return Scaffold(
         appBar: ProductAppBar(),
         body: SingleChildScrollView(
@@ -309,10 +315,10 @@ class _ProductDetailsState extends State<ProductDetails> {
                         height: 180.h,
                         child: ListView.builder(
                             scrollDirection: Axis.horizontal,
-                            itemCount: widget.review.length,
+                            itemCount: review.length,
                             itemBuilder: (context, index) {
                               return ProductReviews(
-                                review: widget.review[index],
+                                review: review[index],
                               );
                             }),
                       ),

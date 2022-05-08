@@ -29,7 +29,7 @@ class SearchPanel extends StatelessWidget {
           ),
           hintText: "Search for anything",
           prefixIcon: Padding(
-            padding: EdgeInsets.only(right: 19.w),
+            padding: EdgeInsets.only(left: 10.w),
             child: CustomSuffixIcon(
               svgIcon: svgIcon,
             ),

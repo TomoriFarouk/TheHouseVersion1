@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_ui/domain/model/model.dart';
 import 'package:furniture_ui/presentation/screen/log_in/login.dart';
+import 'package:furniture_ui/presentation/screen/product/product_details.dart';
 import 'package:furniture_ui/presentation/screen/screen.dart';
 import 'package:furniture_ui/presentation/screen/sign_up/widget/confirmEmail_page.dart';
 import 'package:furniture_ui/presentation/widget/widget.dart';
@@ -16,6 +17,7 @@ class Routes {
   static const String confirmEmailRoute = "/cemail";
   static const String productPageRoute = "/productPage";
   static const String cartRoute = "/cart";
+  static const String productDetailRoute = "/details";
 }
 
 class RoutesGenerator {
@@ -33,6 +35,8 @@ class RoutesGenerator {
                 ));
       case Routes.productPageRoute:
         return ProductPage.getRoute(subcategory: routeSettings.arguments as SubCategory);
+      case Routes.productDetailRoute:
+        return ProductDetails.getRoute(product: routeSettings.arguments as Product);
       case Routes.tabRoute:
         return MaterialPageRoute(builder: (_) => TabWidget());
       case Routes.loginRoute:

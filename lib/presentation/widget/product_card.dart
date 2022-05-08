@@ -11,7 +11,9 @@ class ProductCard extends StatelessWidget {
   Widget build(BuildContext context) {
     double WIDTH = MediaQuery.of(context).size.width;
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        Navigator.pushNamed(context, '/product', arguments: product);
+      },
       child: Row(
         children: [
           Column(

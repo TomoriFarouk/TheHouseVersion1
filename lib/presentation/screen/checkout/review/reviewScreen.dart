@@ -172,7 +172,7 @@ class _ReviewScreenState extends State<ReviewScreen> {
                     height: 16.h,
                   ),
                   CartCard(check: false),
-                  SizedBox(height: 8.h),
+                  // SizedBox(height: 8.h),
                   Align(
                     alignment: Alignment.topLeft,
                     child: TitleText(
