@@ -133,8 +133,16 @@ class PaymentScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      paymentCard(svgIcon: 'assets/icons/Apple.svg'),
-                      paymentCard(svgIcon: 'assets/icons/google.svg')
+                      paymentCard(
+                        svgIcon: 'assets/icons/Apple.svg',
+                        text: 'Apple Pay',
+                        color: Color(0xFF8D9091),
+                      ),
+                      paymentCard(
+                        svgIcon: 'assets/icons/google.svg',
+                        text: 'Google Pay',
+                        color: Color(0x1AD5B65B),
+                      )
                     ],
                   ),
                   SizedBox(
@@ -158,15 +166,27 @@ class PaymentScreen extends StatelessWidget {
     );
   }
 
-  Widget paymentCard({String? svgIcon}) {
+  Widget paymentCard({String? svgIcon, String? text, Color? color}) {
     return Container(
       width: 175.w,
       height: 58,
-      decoration: BoxDecoration(borderRadius: BorderRadius.circular(12), color: ColorManager.circleColor),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(12),
+        color: color,
+      ),
       child: Center(
-        child: SvgPicture.asset(
-          svgIcon!,
-          height: 24.w,
+        child: Row(
+          children: [
+            SvgPicture.asset(
+              svgIcon!,
+              height: 24.w,
+              color: ColorManager.goldColor,
+            ),
+            SizedBox(
+              width: 12.w,
+            ),
+            BodyText(text: text!, size: 14.sp)
+          ],
         ),
       ),
     );

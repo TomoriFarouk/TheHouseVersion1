@@ -58,7 +58,7 @@ class _PaymentCardListState extends State<PaymentCardList> {
             SizedBox(width: 14.w),
             Expanded(
               child: Container(
-                height: 70,
+                height: 100,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -89,6 +89,7 @@ class _PaymentCardListState extends State<PaymentCardList> {
                         SizedBox(width: 16.w),
                         Container(
                           height: 20.h,
+                          width: 59.w,
                           decoration: BoxDecoration(
                               border: Border(
                             bottom: BorderSide(color: Color(0xFFCCCCCC), width: 2),
