@@ -7,3 +7,5 @@ export 'PricingWithDiscount/pricing.dart';
 export 'PricingWithDiscount/Discount.dart';
 export 'address/address.dart';
 export 'Delivery/delivery.dart';
+export 'Payment/payment.dart';
+export 'Payment/externalPayment.dart';

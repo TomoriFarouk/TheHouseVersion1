@@ -23,23 +23,6 @@ class _AddressCardState extends State<AddressCard> {
           // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Container(
-            //   height: 20,
-            //   width: 20,
-            //   decoration: BoxDecoration(
-            //       border: Border.all(
-            //         color: widget.address.isSelected == true ? ColorManager.primaryColor : ColorManager.circleColor,
-            //         width: 2,
-            //       ),
-            //       shape: BoxShape.circle),
-            //   child: Center(
-            //     child: Container(
-            //       height: 8.57,
-            //       width: 8.57,
-            //       decoration: BoxDecoration(color: widget.address.isSelected == true ? ColorManager.primaryColor : ColorManager.circleColor, shape: BoxShape.circle),
-            //     ),
-            //   ),
-            // ),
             Icon(
               (widget.onPressed == widget.selectedPosition) ? Icons.radio_button_checked : Icons.radio_button_unchecked,
               color: (widget.onPressed == widget.selectedPosition) ? ColorManager.goldColor : ColorManager.disableColor,

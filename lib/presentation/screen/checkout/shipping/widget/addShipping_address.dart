@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:furniture_ui/presentation/resources/resource.dart';
 import 'package:furniture_ui/presentation/screen/cart/widget/order_text.dart';
 import 'package:furniture_ui/presentation/widget/build_form.dart';
 import 'package:furniture_ui/presentation/widget/widget.dart';
@@ -90,7 +91,7 @@ class _ShippingAddressState extends State<ShippingAddress> {
               children: [
                 Checkbox(
                   checkColor: Colors.greenAccent,
-                  activeColor: Colors.red,
+                  activeColor: ColorManager.goldColor,
                   value: this.valuefirst,
                   onChanged: (value) {
                     setState(() {
