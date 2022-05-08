@@ -7,3 +7,6 @@ export 'filter/filter_page.dart';
 export 'cart/cart_screen.dart';
 export 'sign_up/sign_Up_screen.dart';
 export 'checkout/shipping/shipping_screen.dart';
+export 'checkout/shipping/add_shipping_details.dart';
+export 'checkout/payment/payment_screen.dart';
+export 'checkout/review/reviewScreen.dart';

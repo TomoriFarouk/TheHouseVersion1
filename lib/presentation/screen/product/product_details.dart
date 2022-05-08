@@ -82,7 +82,11 @@ class _ProductDetailsState extends State<ProductDetails> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    AuthButton(text: 'View in Ar', press: () {}),
+                    AuthButton(
+                        text: 'View in Ar',
+                        press: () {
+                          Navigator.pushReplacementNamed(context, Routes.cartRoute);
+                        }),
                     Padding(
                       padding: EdgeInsets.only(top: 16.h),
                       child: TitleText(

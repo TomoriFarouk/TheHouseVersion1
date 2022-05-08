@@ -35,7 +35,7 @@ class CartScreen extends StatelessWidget with PreferredSizeWidget {
                     Builder(
                       builder: (context) => InkWell(
                         onTap: () {
-                          Scaffold.of(context).openDrawer();
+                          Navigator.of(context).pop();
                         },
                         child: CustomSuffixIcon(
                           svgIcon: 'assets/icons/backArrow.svg',

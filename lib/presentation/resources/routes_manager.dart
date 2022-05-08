@@ -18,6 +18,10 @@ class Routes {
   static const String productPageRoute = "/productPage";
   static const String cartRoute = "/cart";
   static const String productDetailRoute = "/details";
+  static const String shippingScreenRoute = "/shippingScreen";
+  static const String addShippingScreenRoute = "/addShippingScreen";
+  static const String paymentScreenRoute = "/paymentScreen";
+  static const String reviewScreenRoute = "/reviewScreen";
 }
 
 class RoutesGenerator {
@@ -47,6 +51,14 @@ class RoutesGenerator {
         return MaterialPageRoute(builder: (_) => ConfirmEmail());
       case Routes.cartRoute:
         return MaterialPageRoute(builder: (_) => CartScreen());
+      case Routes.shippingScreenRoute:
+        return MaterialPageRoute(builder: (_) => ShippingScreen());
+      case Routes.paymentScreenRoute:
+        return MaterialPageRoute(builder: (_) => PaymentScreen());
+      case Routes.addShippingScreenRoute:
+        return MaterialPageRoute(builder: (_) => AddShippingScreen());
+      case Routes.reviewScreenRoute:
+        return MaterialPageRoute(builder: (_) => ReviewScreen());
       default:
         return UnDefinedRoute();
     }

@@ -183,7 +183,11 @@ class PaymentScreen extends StatelessWidget {
                   SizedBox(
                     height: 10.h,
                   ),
-                  AuthButton(text: 'Continue', press: () {})
+                  AuthButton(
+                      text: 'Continue',
+                      press: () {
+                        Navigator.pushReplacementNamed(context, Routes.reviewScreenRoute);
+                      })
                 ],
               ),
             )

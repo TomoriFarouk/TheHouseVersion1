@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:furniture_ui/domain/model/model.dart';
+import 'package:furniture_ui/presentation/resources/resource.dart';
 import 'package:furniture_ui/presentation/screen/cart/widget/order_text.dart';
 import 'package:furniture_ui/presentation/screen/checkout/widget/address_card_list.dart';
 import 'package:furniture_ui/presentation/screen/checkout/widget/checkout_appbar.dart';
@@ -41,7 +42,11 @@ class ShippingScreen extends StatelessWidget {
                   Container(child: AddressCardlist(addresses: Address.address.toList())),
                   Row(
                     children: [
-                      IconButton(icon: Icon(Icons.add), onPressed: () {}),
+                      IconButton(
+                          icon: Icon(Icons.add),
+                          onPressed: () {
+                            Navigator.pushReplacementNamed(context, Routes.addShippingScreenRoute);
+                          }),
                       SizedBox(width: 16.w),
                       TitleText(text: 'Add address', Size: 14)
                     ],
@@ -81,7 +86,11 @@ class ShippingScreen extends StatelessWidget {
                   SizedBox(
                     height: 10.h,
                   ),
-                  AuthButton(text: 'Continue', press: () {})
+                  AuthButton(
+                      text: 'Continue',
+                      press: () {
+                        Navigator.pushReplacementNamed(context, Routes.paymentScreenRoute);
+                      })
                 ],
               ),
             )

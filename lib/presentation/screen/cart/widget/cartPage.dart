@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:furniture_ui/presentation/resources/resource.dart';
 import 'package:furniture_ui/presentation/widget/widget.dart';
 
 import 'cart_card.dart';
@@ -54,7 +55,9 @@ class CartPage extends StatelessWidget {
                         OrderText(text1: 'items Subtotal', text2: '#420.69'),
                         AuthButton(
                           text: 'Proceed to checkout',
-                          press: () {},
+                          press: () {
+                            Navigator.pushReplacementNamed(context, Routes.tabRoute);
+                          },
                         ),
                       ]))
                 ]))
