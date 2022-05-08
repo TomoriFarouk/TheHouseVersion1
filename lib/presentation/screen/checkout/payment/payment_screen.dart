@@ -145,6 +145,7 @@ class PaymentScreen extends StatelessWidget {
                       )
                     ],
                   ),
+                  SizedBox(height: 61.h),
                   SizedBox(
                     width: MediaQuery.of(context).size.width,
                     child: Divider(

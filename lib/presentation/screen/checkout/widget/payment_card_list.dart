@@ -79,15 +79,13 @@ class _PaymentCardListState extends State<PaymentCardList> {
                             borderRadius: BorderRadius.circular(32),
                             color: Color(0x1AD5B65B),
                           ),
-                          child: Align(
-                            alignment: Alignment.topCenter,
-                            child: Text(
-                              'Default',
-                              style: Theme.of(context).textTheme.headline1!.copyWith(
-                                    fontSize: 12.sp,
-                                    color: ColorManager.goldColor,
-                                  ),
-                            ),
+                          child: Text(
+                            'Default',
+                            style: Theme.of(context).textTheme.headline1!.copyWith(
+                                  fontSize: 12.sp,
+                                  color: ColorManager.goldColor,
+                                ),
+                            textAlign: TextAlign.center,
                           ),
                         ),
                         SizedBox(width: 16.w),
