@@ -22,7 +22,7 @@ class PaymentScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            StepperTab(selectedIdex: 2),
+            StepperTab(selectedIdex: 3),
             SizedBox(
               height: 48.h,
             ),
@@ -33,6 +33,16 @@ class PaymentScreen extends StatelessWidget {
               ),
               child: Column(
                 children: [
+                  Align(
+                    alignment: Alignment.topLeft,
+                    child: TitleText(
+                      text: 'Please confirm and submit your order',
+                      Size: 16,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 24.h,
+                  ),
                   Align(
                     alignment: Alignment.topLeft,
                     child: TitleText(
@@ -52,7 +62,7 @@ class PaymentScreen extends StatelessWidget {
                           SizedBox(width: 14.w),
                           Expanded(
                             child: Container(
-                              height: 120,
+                              height: 100,
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
@@ -86,23 +96,7 @@ class PaymentScreen extends StatelessWidget {
                                   BodyText(
                                     text: '0123 456 7890', //address.phonenumber.toString(),
                                     size: 14,
-                                  ),
-                                  Container(
-                                    height: 26.h,
-                                    width: 100.w,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(32),
-                                      color: Color(0x1AD5B65B),
-                                    ),
-                                    child: Text(
-                                      'Home Address',
-                                      style: Theme.of(context).textTheme.headline1!.copyWith(
-                                            fontSize: 12.sp,
-                                            color: ColorManager.goldColor,
-                                          ),
-                                      textAlign: TextAlign.center,
-                                    ),
-                                  ),
+                                  )
                                 ],
                               ),
                             ),
@@ -113,9 +107,9 @@ class PaymentScreen extends StatelessWidget {
                               Navigator.pushNamed(context, '');
                             },
                             child: Text(
-                              'Change',
+                              'Edit',
                               style: Theme.of(context).textTheme.bodyText2!.copyWith(
-                                    color: Color(0x1AD5B65B),
+                                    color: Color(0xFF8D9091),
                                     fontSize: 14.sp,
                                   ),
                             ),
