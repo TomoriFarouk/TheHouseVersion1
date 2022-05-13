@@ -61,57 +61,57 @@ class _ActiveListingState extends State<ActiveListing> {
           ),
           SizedBox(height: 8.h),
           Row(children: [
-            // tab(
-            //   width: 143.w,
-            //   color: Color(0x1AD5B65B),
-            //   text1: 'Mark as read',
-            //   text2: 'assets/icons/tick.svg',
-            //   textColor: ColorManager.goldColor,
-            // ),
-            // SizedBox(width: 16.w),
-            // tab(
-            //   width: 143.w,
-            //   color: Color(0x1AEFEFEF),
-            //   text1: 'Share',
-            //   text2: 'assets/icons/Share.svg',
-            //   textColor: ColorManager.primaryColor,
-            // ),
-            // SizedBox(width: 16.w),
-            // tab(
-            //   width: 47.w,
-            //   color: Color(0x1AEFEFEF),
-            //   text1: '',
-            //   text2: 'assets/icons/fi_more-horizontal.svg',
-            //   textColor: ColorManager.primaryColor,
-            // )
+            tab(
+              width: 143.w,
+              color: Color(0x1AD5B65B),
+              text1: 'Mark as read',
+              text2: 'assets/icons/tick.svg',
+              textColor: ColorManager.goldColor,
+            ),
+            SizedBox(width: 16.w),
+            tab(
+              width: 143.w,
+              color: Color(0x1AEFEFEF),
+              text1: 'Share',
+              text2: 'assets/icons/Share.svg',
+              textColor: ColorManager.primaryColor,
+            ),
+            SizedBox(width: 16.w),
+            tab(
+              width: 47.w,
+              color: Color(0x1AEFEFEF),
+              text1: '',
+              text2: 'assets/icons/fi_more-horizontal.svg',
+              textColor: ColorManager.primaryColor,
+            )
           ]),
         ],
       ),
     );
   }
 
-  // Widget tab({double? height, double? width, Color? color, String? text1, String? text2, Color? textColor}) {
-  //   return Container(
-  //     height: height!.h,
-  //     width: width!.w,
-  //     decoration: BoxDecoration(
-  //       borderRadius: BorderRadius.circular(12),
-  //       color: color,
-  //     ),
-  //     child: Row(
-  //       children: [
-  //         SvgPicture.asset(text2!, height: 10.h, width: 16.w),
-  //         SizedBox(width: 12.w),
-  //         Text(
-  //           text1!,
-  //           style: Theme.of(context).textTheme.headline1!.copyWith(
-  //                 fontSize: 14.sp,
-  //                 color: textColor,
-  //               ),
-  //           textAlign: TextAlign.center,
-  //         ),
-  //       ],
-  //     ),
-  //   );
-  // }
+  Widget tab({double? height, double? width, Color? color, String? text1, String? text2, Color? textColor}) {
+    return Container(
+      height: height!.h,
+      width: width!.w,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(12),
+        color: color,
+      ),
+      child: Row(
+        children: [
+          SvgPicture.asset(text2!, height: 10.h, width: 16.w),
+          SizedBox(width: 12.w),
+          Text(
+            text1!,
+            style: Theme.of(context).textTheme.headline1!.copyWith(
+                  fontSize: 14.sp,
+                  color: textColor,
+                ),
+            textAlign: TextAlign.center,
+          ),
+        ],
+      ),
+    );
+  }
 }
