@@ -67,22 +67,25 @@ class _ActiveListingState extends State<ActiveListing> {
               text1: 'Mark as read',
               text2: 'assets/icons/tick.svg',
               textColor: ColorManager.goldColor,
+              padding: 19,
             ),
             SizedBox(width: 16.w),
             tab(
               width: 143.w,
-              color: Color(0x1AEFEFEF),
+              color: Color(0xFFEFEFEF),
               text1: 'Share',
               text2: 'assets/icons/Share.svg',
               textColor: ColorManager.primaryColor,
+              padding: 40,
             ),
             SizedBox(width: 16.w),
             tab(
               width: 47.w,
-              color: Color(0x1AEFEFEF),
+              color: Color(0xFFEFEFEF),
               text1: '',
               text2: 'assets/icons/fi_more-horizontal.svg',
               textColor: ColorManager.primaryColor,
+              padding: 16,
             )
           ]),
         ],
@@ -90,7 +93,7 @@ class _ActiveListingState extends State<ActiveListing> {
     );
   }
 
-  Widget tab({required double width, Color? color, String? text1, String? text2, Color? textColor}) {
+  Widget tab({required double width, Color? color, String? text1, String? text2, Color? textColor, required double padding}) {
     return Container(
       height: 44.h,
       width: width.w,
@@ -98,19 +101,22 @@ class _ActiveListingState extends State<ActiveListing> {
         borderRadius: BorderRadius.circular(12),
         color: color,
       ),
-      child: Row(
-        children: [
-          SvgPicture.asset(text2!, height: 10.h, width: 16.w),
-          SizedBox(width: 12.w),
-          Text(
-            text1!,
-            style: Theme.of(context).textTheme.headline1!.copyWith(
-                  fontSize: 14.sp,
-                  color: textColor,
-                ),
-            textAlign: TextAlign.center,
-          ),
-        ],
+      child: Padding(
+        padding: EdgeInsets.only(left: padding.w),
+        child: Row(
+          children: [
+            SvgPicture.asset(text2!, height: 10.h, width: 16.w),
+            SizedBox(width: 12.w),
+            Text(
+              text1!,
+              style: Theme.of(context).textTheme.headline1!.copyWith(
+                    fontSize: 14.sp,
+                    color: textColor,
+                  ),
+              textAlign: TextAlign.center,
+            ),
+          ],
+        ),
       ),
     );
   }
