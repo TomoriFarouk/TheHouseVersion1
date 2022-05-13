@@ -214,7 +214,9 @@ class _ReviewScreenState extends State<ReviewScreen> {
                           OrderText(text1: 'items Subtotal', text2: '#420.69'),
                           AuthButton(
                             text: 'Make Payment',
-                            press: () {},
+                            press: () {
+                              Navigator.pushNamed(context, Routes.lisitngScreen);
+                            },
                           ),
                         ]))
                   ])),

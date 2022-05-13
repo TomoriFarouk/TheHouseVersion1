@@ -29,13 +29,18 @@ class MyApp extends StatelessWidget {
           GlobalMaterialLocalizations.delegate,
           GlobalWidgetsLocalizations.delegate,
           S.delegate
-        ], debugShowCheckedModeBanner: false, title: 'Flutter Demo', onGenerateRoute: RoutesGenerator.getRoute, theme: getApplicationTheme(), home: ListingScreen()
+        ], debugShowCheckedModeBanner: false, 
+        title: 'Flutter Demo', 
+        onGenerateRoute: RoutesGenerator.getRoute, 
+        theme: getApplicationTheme(),
+         home:
+         // ListingScreen()
             //FinanceScreen(),
             // ReviewScreen(),
             //PaymentScreen(),
             //AddShippingScreen(),,
-            //  IntroPage(
-            // introModelList: Splash.splash.toList(),
+              IntroPage(
+             introModelList: Splash.splash.toList(),
             // ),
             //CartScreen(),
             //ProductDetails(review: ProductReview.reviews.toList(),),

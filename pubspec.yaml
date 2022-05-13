@@ -45,6 +45,7 @@ dependencies:
   flutter_screenutil: ^5.4.0
   drawer: ^0.0.1  flutter_portal: ^1.0.0
 
+  dropdown_formfield: ^0.1.4
   equatable: ^2.0.3
   auto_size_text: ^2.1.0
 
