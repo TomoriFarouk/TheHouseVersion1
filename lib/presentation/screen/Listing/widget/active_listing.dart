@@ -5,8 +5,12 @@ import 'package:furniture_ui/presentation/resources/ConstantData.dart';
 import 'package:furniture_ui/presentation/resources/resource.dart';
 import 'package:furniture_ui/presentation/widget/widget.dart';
 
-class  ActiveListing extends StatelessWidget {
+class ActiveListing extends StatefulWidget {
+  @override
+  State<ActiveListing> createState() => _ActiveListingState();
+}
 
+class _ActiveListingState extends State<ActiveListing> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -58,39 +62,35 @@ class  ActiveListing extends StatelessWidget {
           SizedBox(height: 8.h),
           Row(children: [
             tab(
-              width:143.w,
+              width: 143.w,
               color: Color(0x1AD5B65B),
-              text1:'Mark as read',
-              text2:'assets/icons/tick.svg',
+              text1: 'Mark as read',
+              text2: 'assets/icons/tick.svg',
               textColor: ColorManager.goldColor,
-              context: context
             ),
-            SizedBox(width:16.w),
+            SizedBox(width: 16.w),
             tab(
-              width:143.w,
+              width: 143.w,
               color: Color(0x1AEFEFEF),
-              text1:'Share',
-              text2:'assets/icons/Share.svg',
+              text1: 'Share',
+              text2: 'assets/icons/Share.svg',
               textColor: ColorManager.primaryColor,
-               context: context
             ),
-            SizedBox(width:16.w),
+            SizedBox(width: 16.w),
             tab(
-              width:47.w,
+              width: 47.w,
               color: Color(0x1AEFEFEF),
-              text1:'',
-              text2:'assets/icons/fi_more-horizontal.svg',
+              text1: '',
+              text2: 'assets/icons/fi_more-horizontal.svg',
               textColor: ColorManager.primaryColor,
-               context: context
             )
           ]),
-          
         ],
       ),
     );
   }
 
-  Widget tab({double? height, double? width, Color? color, String? text1, String? text2, Color? textColor,required BuildContext context}) {
+  Widget tab({double? height, double? width, Color? color, String? text1, String? text2, Color? textColor}) {
     return Container(
       height: height!.h,
       width: width!.w,
@@ -98,10 +98,10 @@ class  ActiveListing extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
         color: color,
       ),
-      child: Row(       
+      child: Row(
         children: [
           SvgPicture.asset(text2!, height: 10.h, width: 16.w),
-          SizedBox(width:12.w),
+          SizedBox(width: 12.w),
           Text(
             text1!,
             style: Theme.of(context).textTheme.headline1!.copyWith(
