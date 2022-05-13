@@ -7,6 +7,8 @@ import 'package:furniture_ui/presentation/resources/resource.dart';
 import 'package:furniture_ui/presentation/widget/widget.dart';
 
 class ActiveListing extends StatefulWidget {
+  final int value;
+  ActiveListing({required this.value});
   @override
   State<ActiveListing> createState() => _ActiveListingState();
 }
@@ -77,7 +79,11 @@ class _ActiveListingState extends State<ActiveListing> {
                 tab(
                   width: 143.w,
                   color: Color(0x1AD5B65B),
-                  text1: 'Mark as read',
+                  text1: widget.value == 1
+                      ? 'Mark as read'
+                      : widget.value == 2
+                          ? 'Publish'
+                          : 'Renew',
                   text2: 'assets/icons/tick.svg',
                   textColor: ColorManager.goldColor,
                   padding: 19,
@@ -86,8 +92,16 @@ class _ActiveListingState extends State<ActiveListing> {
                 tab(
                   width: 143.w,
                   color: Color(0xFFEFEFEF),
-                  text1: 'Share',
-                  text2: 'assets/icons/Share.svg',
+                  text1: widget.value == 1
+                      ? 'Share'
+                      : widget.value == 2
+                          ? 'Edit'
+                          : 'Edit',
+                  text2: widget.value == 1
+                      ? 'assets/icons/Share.svg'
+                      : widget.value == 2
+                          ? 'assets/icons/fi_edit.svg'
+                          : 'assets/icons/fi_edit.svg',
                   textColor: ColorManager.primaryColor,
                   padding: 40,
                 ),

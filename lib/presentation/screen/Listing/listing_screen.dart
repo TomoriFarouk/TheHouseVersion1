@@ -10,6 +10,7 @@ import 'package:furniture_ui/presentation/screen/checkout/widget/stepper_tab.dar
 import 'package:furniture_ui/presentation/widget/widget.dart';
 
 import 'widget/active_listing.dart';
+import 'widget/heading.dart';
 
 class ListingScreen extends StatefulWidget {
   @override
@@ -39,46 +40,7 @@ class _ListingScreenState extends State<ListingScreen> {
                 padding: const EdgeInsets.all(20),
                 child: Column(
                   children: [
-                    Align(
-                      alignment: Alignment.topLeft,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          ListingTab(text: 'Finance'),
-                          SizedBox(width: 16.w),
-                          ListingTab(text: 'Buying'),
-                          SizedBox(width: 16.w),
-                          ListingTab(text: 'Messages'),
-                        ],
-                      ),
-                    ),
-                    SizedBox(height: 16.h),
-                    Container(
-                      height: 58.h,
-                      width: 366.w,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(12),
-                        color: Color(0x1AD5B65B),
-                      ),
-                      child: Padding(
-                        padding: EdgeInsets.only(left: 110.w),
-                        child: Row(
-                          children: [
-                            SvgPicture.asset('assets/icons/add.svg', height: 10.h, width: 20.w),
-                            SizedBox(width: 8.w),
-                            Text(
-                              'Create new listing',
-                              style: Theme.of(context).textTheme.headline1!.copyWith(
-                                    fontSize: 14.sp,
-                                    color: ColorManager.goldColor,
-                                  ),
-                              textAlign: TextAlign.center,
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
+                    Heading(),
                     SizedBox(height: 24.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -99,9 +61,9 @@ class _ListingScreenState extends State<ListingScreen> {
                               child: Column(
                                 mainAxisSize: MainAxisSize.min,
                                 children: [
-                                  ListTile(title: Text('Active Listing')),
-                                  ListTile(title: Text('Draft')),
-                                  ListTile(title: Text('Closed')),
+                                  ListTile(title: textbutton(text1: 'Active listing', text2: Routes.lisitngScreen)),
+                                  ListTile(title: textbutton(text1: 'Draft', text2: Routes.listingDraftScreen)),
+                                  ListTile(title: textbutton(text1: 'Closed', text2: Routes.lisitngClosedScreen)),
                                 ],
                               ),
                             ),
@@ -122,17 +84,40 @@ class _ListingScreenState extends State<ListingScreen> {
                       ],
                     ),
                     SizedBox(height: 16.h),
-                    ActiveListing(),
+                    ActiveListing(
+                      value: 1,
+                    ),
                     SizedBox(height: 16.h),
-                    ActiveListing(),
+                    ActiveListing(
+                      value: 1,
+                    ),
                     SizedBox(height: 16.h),
-                    ActiveListing(),
+                    ActiveListing(
+                      value: 1,
+                    ),
                     SizedBox(height: 16.h),
-                    ActiveListing()
+                    ActiveListing(
+                      value: 1,
+                    )
                   ],
                 ),
               ),
             )),
+      ),
+    );
+  }
+
+  Widget textbutton({String? text1, String? text2}) {
+    return TextButton(
+      style: TextButton.styleFrom(primary: Colors.black),
+      onPressed: () {
+        Navigator.pushNamed(context, text2!);
+      },
+      child: Text(
+        text1!,
+        style: Theme.of(context).textTheme.bodyText1!.copyWith(
+              fontSize: 14.sp,
+            ),
       ),
     );
   }

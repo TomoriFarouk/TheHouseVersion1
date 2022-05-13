@@ -22,6 +22,9 @@ class Routes {
   static const String addShippingScreenRoute = "/addShippingScreen";
   static const String paymentScreenRoute = "/paymentScreen";
   static const String reviewScreenRoute = "/reviewScreen";
+  static const String listingDraftScreen = "/listingDraft";
+  static const String lisitngClosedScreen = "/listingClosed";
+  static const String lisitngScreen = "/listing";
 }
 
 class RoutesGenerator {
@@ -59,6 +62,12 @@ class RoutesGenerator {
         return MaterialPageRoute(builder: (_) => AddShippingScreen());
       case Routes.reviewScreenRoute:
         return MaterialPageRoute(builder: (_) => ReviewScreen());
+      case Routes.listingDraftScreen:
+        return MaterialPageRoute(builder: (_) => DraftScreen());
+      case Routes.lisitngClosedScreen:
+        return MaterialPageRoute(builder: (_) => ClosedScreen());
+      case Routes.lisitngScreen:
+        return MaterialPageRoute(builder: (_) => ListingScreen());
       default:
         return UnDefinedRoute();
     }
