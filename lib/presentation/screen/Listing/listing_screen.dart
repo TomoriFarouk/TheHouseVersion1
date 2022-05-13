@@ -17,7 +17,7 @@ class ListingScreen extends StatefulWidget {
 }
 
 class _ListingScreenState extends State<ListingScreen> {
-  bool _isExpand = true;
+  //bool _isExpand = true;
   bool isMenuOpen = false;
   @override
   Widget build(BuildContext context) {
@@ -94,11 +94,6 @@ class _ListingScreenState extends State<ListingScreen> {
                         ),
                         child: InkWell(
                             onTap: () {
-                              if (_isExpand) {
-                                _isExpand = false;
-                              } else {
-                                _isExpand = true;
-                              }
                               setState(() {
                                 isMenuOpen = true;
                               });
