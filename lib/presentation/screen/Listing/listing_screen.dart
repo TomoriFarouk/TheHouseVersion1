@@ -65,45 +65,45 @@ class _ListingScreenState extends State<ListingScreen> {
                         'Active',
                         style: Theme.of(context).textTheme.subtitle2,
                       ),
-                      PortalTarget(
-                        visible: isMenuOpen,
-                        // portal: GestureDetector(
-                        //   behavior: HitTestBehavior.opaque,
-                        //   onTap: () {
-                        //     setState(() {
-                        //       isMenuOpen = false;
-                        //     });
-                        //   },
-                        // ),
-                        anchor: const Aligned(
-                          follower: Alignment.topRight,
-                          target: Alignment.topLeft,
-                        ),
-                        portalFollower: Material(
-                          elevation: 8,
-                          child: IntrinsicWidth(
-                            child: Column(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                ListTile(title: Text('option 1')),
-                                ListTile(title: Text('option 2')),
-                                ListTile(title: Text('option 2')),
-                              ],
+                      GestureDetector(
+                        behavior: HitTestBehavior.opaque,
+                        onTap: () {
+                          setState(() {
+                            isMenuOpen = false;
+                          });
+                        },
+                        child: PortalTarget(
+                          visible: isMenuOpen,
+                          anchor: const Aligned(
+                            follower: Alignment.topRight,
+                            target: Alignment.topLeft,
+                          ),
+                          portalFollower: Material(
+                            elevation: 8,
+                            child: IntrinsicWidth(
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  ListTile(title: Text('option 1')),
+                                  ListTile(title: Text('option 2')),
+                                  ListTile(title: Text('option 2')),
+                                ],
+                              ),
                             ),
                           ),
+                          child: InkWell(
+                              onTap: () {
+                                if (isMenuOpen) {
+                                  isMenuOpen = false;
+                                } else {
+                                  isMenuOpen = true;
+                                }
+                                setState(() {
+                                  //isMenuOpen = true;
+                                });
+                              },
+                              child: SvgPicture.asset('assets/icons/OpenArrow.svg', height: 10.h, width: 16.w)),
                         ),
-                        child: InkWell(
-                            onTap: () {
-                              if (isMenuOpen) {
-                                isMenuOpen = false;
-                              } else {
-                                isMenuOpen = true;
-                              }
-                              setState(() {
-                                //isMenuOpen = true;
-                              });
-                            },
-                            child: SvgPicture.asset('assets/icons/OpenArrow.svg', height: 10.h, width: 16.w)),
                       )
                     ],
                   ),
