@@ -3,6 +3,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:furniture_ui/data/generated/l10n.dart';
 import 'package:furniture_ui/domain/model/model.dart';
+import 'package:furniture_ui/presentation/screen/Listing/listing_screen.dart';
 import 'package:furniture_ui/presentation/screen/Listing/widget/active_listing.dart';
 import 'package:furniture_ui/presentation/screen/checkout/review/reviewScreen.dart';
 import 'presentation/resources/resource.dart';
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
           GlobalMaterialLocalizations.delegate,
           GlobalWidgetsLocalizations.delegate,
           S.delegate
-        ], debugShowCheckedModeBanner: false, title: 'Flutter Demo', onGenerateRoute: RoutesGenerator.getRoute, theme: getApplicationTheme(), home: ActiveListing()
+        ], debugShowCheckedModeBanner: false, title: 'Flutter Demo', onGenerateRoute: RoutesGenerator.getRoute, theme: getApplicationTheme(), home: ListingScreen()
             //FinanceScreen(),
             // ReviewScreen(),
             //PaymentScreen(),
