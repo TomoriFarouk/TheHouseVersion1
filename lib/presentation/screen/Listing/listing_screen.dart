@@ -3,10 +3,10 @@ import 'package:flutter_portal/flutter_portal.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:furniture_ui/presentation/resources/resource.dart';
+import 'package:furniture_ui/presentation/screen/Listing/widget/appBar.dart';
 import 'package:furniture_ui/presentation/screen/Listing/widget/listing_tab.dart';
 import 'package:furniture_ui/presentation/screen/checkout/widget/checkout_appbar.dart';
 import 'package:furniture_ui/presentation/screen/checkout/widget/stepper_tab.dart';
-import 'package:furniture_ui/presentation/widget/appBar.dart';
 import 'package:furniture_ui/presentation/widget/widget.dart';
 
 import 'widget/active_listing.dart';
@@ -44,6 +44,7 @@ class _ListingScreenState extends State<ListingScreen> {
                       width: 270.w,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           ListingTab(text: 'Finance'),
                           ListingTab(text: 'Buying'),
@@ -51,6 +52,7 @@ class _ListingScreenState extends State<ListingScreen> {
                         ],
                       ),
                     ),
+                    SizedBox(height: 16.h),
                     Container(
                       height: 58.h,
                       width: 366.w,

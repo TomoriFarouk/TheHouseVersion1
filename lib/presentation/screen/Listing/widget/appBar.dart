@@ -65,6 +65,14 @@ class ListingAppBar extends StatelessWidget with PreferredSizeWidget {
                 svgIcon: 'assets/icons/search-normal.svg',
               ),
             ),
+            SizedBox(height: 10.h),
+            SizedBox(
+              width: MediaQuery.of(context).size.width,
+              child: Divider(
+                color: Color(0xFFCCCCCC),
+                thickness: 1,
+              ),
+            ),
           ],
         ),
       ),
