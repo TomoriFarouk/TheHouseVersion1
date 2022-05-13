@@ -9,7 +9,7 @@ class ListingAppBar extends StatelessWidget with PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      toolbarHeight: 145.h,
+      toolbarHeight: 100.h,
       elevation: 0,
       centerTitle: false,
       leadingWidth: 0,
@@ -72,5 +72,5 @@ class ListingAppBar extends StatelessWidget with PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => Size.fromHeight(145.h);
+  Size get preferredSize => Size.fromHeight(100.h);
 }
