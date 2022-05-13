@@ -22,60 +22,60 @@ class _ListingScreenState extends State<ListingScreen> {
   @override
   Widget build(BuildContext context) {
     return Portal(
-      child: Scaffold(
-          appBar: ListingAppBar(text: 'Listing'),
-          body: SingleChildScrollView(
-            child: Padding(
-              padding: const EdgeInsets.all(20),
-              child: Column(
-                children: [
-                  Container(
-                    height: 36.h,
-                    width: 270.w,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        ListingTab(text: 'Finance'),
-                        ListingTab(text: 'Buying'),
-                        ListingTab(text: 'Messages'),
-                      ],
-                    ),
-                  ),
-                  Container(
-                    height: 58.h,
-                    width: 366.w,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12),
-                      color: Color(0x1AD5B65B),
-                    ),
-                    child: Text(
-                      'Create new Listing',
-                      style: Theme.of(context).textTheme.headline1!.copyWith(
-                            fontSize: 14.sp,
-                            color: ColorManager.goldColor,
-                          ),
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
-                  SizedBox(height: 24.h),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'Active',
-                        style: Theme.of(context).textTheme.subtitle2,
+      child: GestureDetector(
+        behavior: HitTestBehavior.opaque,
+        onTap: () {
+          if (isMenuOpen) {
+            isMenuOpen = false;
+          } else {
+            isMenuOpen = true;
+          }
+          setState(() {});
+        },
+        child: Scaffold(
+            appBar: ListingAppBar(text: 'Listing'),
+            body: SingleChildScrollView(
+              child: Padding(
+                padding: const EdgeInsets.all(20),
+                child: Column(
+                  children: [
+                    Container(
+                      height: 36.h,
+                      width: 270.w,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          ListingTab(text: 'Finance'),
+                          ListingTab(text: 'Buying'),
+                          ListingTab(text: 'Messages'),
+                        ],
                       ),
-                      GestureDetector(
-                        behavior: HitTestBehavior.opaque,
-                        onTap: () {
-                          if (isMenuOpen) {
-                            isMenuOpen = false;
-                          } else {
-                            isMenuOpen = true;
-                          }
-                          setState(() {});
-                        },
-                        child: PortalTarget(
+                    ),
+                    Container(
+                      height: 58.h,
+                      width: 366.w,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12),
+                        color: Color(0x1AD5B65B),
+                      ),
+                      child: Text(
+                        'Create new Listing',
+                        style: Theme.of(context).textTheme.headline1!.copyWith(
+                              fontSize: 14.sp,
+                              color: ColorManager.goldColor,
+                            ),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                    SizedBox(height: 24.h),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Active',
+                          style: Theme.of(context).textTheme.subtitle2,
+                        ),
+                        PortalTarget(
                           visible: isMenuOpen,
                           anchor: const Aligned(
                             follower: Alignment.topRight,
@@ -106,16 +106,16 @@ class _ListingScreenState extends State<ListingScreen> {
                                 });
                               },
                               child: SvgPicture.asset('assets/icons/OpenArrow.svg', height: 10.h, width: 16.w)),
-                        ),
-                      )
-                    ],
-                  ),
-                  SizedBox(height: 25.h),
-                  ActiveListing()
-                ],
+                        )
+                      ],
+                    ),
+                    SizedBox(height: 25.h),
+                    ActiveListing()
+                  ],
+                ),
               ),
-            ),
-          )),
+            )),
+      ),
     );
   }
 }
