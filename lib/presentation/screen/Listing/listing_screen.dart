@@ -9,6 +9,8 @@ import 'package:furniture_ui/presentation/screen/checkout/widget/stepper_tab.dar
 import 'package:furniture_ui/presentation/widget/appBar.dart';
 import 'package:furniture_ui/presentation/widget/widget.dart';
 
+import 'widget/active_listing.dart';
+
 class ListingScreen extends StatefulWidget {
   @override
   State<ListingScreen> createState() => _ListingScreenState();
@@ -101,6 +103,8 @@ class _ListingScreenState extends State<ListingScreen> {
                   )
                 ],
               ),
+              SizedBox(height:25.h),
+              ActiveListing()
             ],
           ),
         ));
