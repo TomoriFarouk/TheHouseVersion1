@@ -68,7 +68,11 @@ class _ListingScreenState extends State<ListingScreen> {
                       GestureDetector(
                         behavior: HitTestBehavior.opaque,
                         onTap: () {
-                          isMenuOpen = false;
+                          if (isMenuOpen) {
+                            isMenuOpen = false;
+                          } else {
+                            isMenuOpen = true;
+                          }
                           setState(() {});
                         },
                         child: PortalTarget(
