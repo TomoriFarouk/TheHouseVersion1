@@ -58,13 +58,22 @@ class _ListingScreenState extends State<ListingScreen> {
                         borderRadius: BorderRadius.circular(12),
                         color: Color(0x1AD5B65B),
                       ),
-                      child: Text(
-                        'Create new Listing',
-                        style: Theme.of(context).textTheme.headline1!.copyWith(
-                              fontSize: 14.sp,
-                              color: ColorManager.goldColor,
+                      child: Padding(
+                        padding: EdgeInsets.only(left: 110.w),
+                        child: Row(
+                          children: [
+                            SvgPicture.asset('assets/icons/add.svg', height: 10.h, width: 20.w),
+                            SizedBox(width: 8.w),
+                            Text(
+                              'Create new listing',
+                              style: Theme.of(context).textTheme.headline1!.copyWith(
+                                    fontSize: 14.sp,
+                                    color: ColorManager.goldColor,
+                                  ),
+                              textAlign: TextAlign.center,
                             ),
-                        textAlign: TextAlign.center,
+                          ],
+                        ),
                       ),
                     ),
                     SizedBox(height: 24.h),
@@ -87,9 +96,9 @@ class _ListingScreenState extends State<ListingScreen> {
                               child: Column(
                                 mainAxisSize: MainAxisSize.min,
                                 children: [
-                                  ListTile(title: Text('option 1')),
-                                  ListTile(title: Text('option 2')),
-                                  ListTile(title: Text('option 2')),
+                                  ListTile(title: Text('Active Listing')),
+                                  ListTile(title: Text('Draft')),
+                                  ListTile(title: Text('Closed')),
                                 ],
                               ),
                             ),

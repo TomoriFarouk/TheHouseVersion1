@@ -12,15 +12,17 @@ class ListingTab extends StatelessWidget {
       width: 80.w,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(32),
-        color: Color(0x1AEFEFEF),
+        color: Color(0xFFEFEFEF),
       ),
-      child: Text(
-        text,
-        style: Theme.of(context).textTheme.headline1!.copyWith(
-              fontSize: 14.sp,
-              color: ColorManager.goldColor,
-            ),
-        textAlign: TextAlign.center,
+      child: Center(
+        child: Text(
+          text,
+          style: Theme.of(context).textTheme.headline1!.copyWith(
+                fontSize: 14.sp,
+                color: ColorManager.goldColor,
+              ),
+          textAlign: TextAlign.center,
+        ),
       ),
     );
   }

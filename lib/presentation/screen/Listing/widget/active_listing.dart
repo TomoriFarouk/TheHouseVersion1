@@ -59,7 +59,7 @@ class _ActiveListingState extends State<ActiveListing> {
               ),
             ],
           ),
-          SizedBox(height: 8.h),
+          SizedBox(height: 17.h),
           Row(children: [
             tab(
               width: 143.w,
@@ -105,8 +105,8 @@ class _ActiveListingState extends State<ActiveListing> {
         padding: EdgeInsets.only(left: padding.w),
         child: Row(
           children: [
-            SvgPicture.asset(text2!, height: 10.h, width: 16.w),
-            SizedBox(width: 12.w),
+            SvgPicture.asset(text2!, height: 10.h, width: 20.w),
+            SizedBox(width: 8.w),
             Text(
               text1!,
               style: Theme.of(context).textTheme.headline1!.copyWith(

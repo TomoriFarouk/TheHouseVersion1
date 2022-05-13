@@ -42,7 +42,7 @@ class ListingAppBar extends StatelessWidget with PreferredSizeWidget {
                         Scaffold.of(context).openDrawer();
                       },
                       child: CustomSuffixIcon(
-                        svgIcon: 'assets/icons/search_normal.svg',
+                        svgIcon: 'assets/icons/search-normal.svg',
                       ),
                     ),
                     InkWell(
@@ -50,7 +50,7 @@ class ListingAppBar extends StatelessWidget with PreferredSizeWidget {
                         Navigator.pushReplacementNamed(context, Routes.cartRoute);
                       },
                       child: CustomSuffixIcon(
-                        svgIcon: 'assets/icons/shopping-cart.svg',
+                        svgIcon: 'assets/icons/notification.svg',
                       ),
                     ),
                   ],
