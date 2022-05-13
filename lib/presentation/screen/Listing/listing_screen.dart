@@ -25,88 +25,91 @@ class _ListingScreenState extends State<ListingScreen> {
       child: Scaffold(
           appBar: ListingAppBar(text: 'Listing'),
           body: SingleChildScrollView(
-            child: Column(
-              children: [
-                Container(
-                  height: 36.h,
-                  width: 270.w,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      ListingTab(text: 'Finance'),
-                      ListingTab(text: 'Buying'),
-                      ListingTab(text: 'Messages'),
-                    ],
-                  ),
-                ),
-                Container(
-                  height: 58.h,
-                  width: 366.w,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(12),
-                    color: Color(0x1AD5B65B),
-                  ),
-                  child: Text(
-                    'Create new Listing',
-                    style: Theme.of(context).textTheme.headline1!.copyWith(
-                          fontSize: 14.sp,
-                          color: ColorManager.goldColor,
-                        ),
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'Active',
-                      style: Theme.of(context).textTheme.subtitle2,
+            child: Padding(
+              padding: const EdgeInsets.all(20),
+              child: Column(
+                children: [
+                  Container(
+                    height: 36.h,
+                    width: 270.w,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        ListingTab(text: 'Finance'),
+                        ListingTab(text: 'Buying'),
+                        ListingTab(text: 'Messages'),
+                      ],
                     ),
-                    PortalTarget(
-                      visible: isMenuOpen,
-                      // portal: GestureDetector(
-                      //   behavior: HitTestBehavior.opaque,
-                      //   onTap: () {
-                      //     setState(() {
-                      //       isMenuOpen = false;
-                      //     });
-                      //   },
-                      // ),
-                      anchor: const Aligned(
-                        follower: Alignment.topLeft,
-                        target: Alignment.topRight,
+                  ),
+                  Container(
+                    height: 58.h,
+                    width: 366.w,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      color: Color(0x1AD5B65B),
+                    ),
+                    child: Text(
+                      'Create new Listing',
+                      style: Theme.of(context).textTheme.headline1!.copyWith(
+                            fontSize: 14.sp,
+                            color: ColorManager.goldColor,
+                          ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Active',
+                        style: Theme.of(context).textTheme.subtitle2,
                       ),
-                      portalFollower: Material(
-                        elevation: 8,
-                        child: IntrinsicWidth(
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              ListTile(title: Text('option 1')),
-                              ListTile(title: Text('option 2')),
-                              ListTile(title: Text('option 2')),
-                            ],
+                      PortalTarget(
+                        visible: isMenuOpen,
+                        // portal: GestureDetector(
+                        //   behavior: HitTestBehavior.opaque,
+                        //   onTap: () {
+                        //     setState(() {
+                        //       isMenuOpen = false;
+                        //     });
+                        //   },
+                        // ),
+                        anchor: const Aligned(
+                          follower: Alignment.topLeft,
+                          target: Alignment.topRight,
+                        ),
+                        portalFollower: Material(
+                          elevation: 8,
+                          child: IntrinsicWidth(
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                ListTile(title: Text('option 1')),
+                                ListTile(title: Text('option 2')),
+                                ListTile(title: Text('option 2')),
+                              ],
+                            ),
                           ),
                         ),
-                      ),
-                      child: InkWell(
-                          onTap: () {
-                            if (_isExpand) {
-                              _isExpand = false;
-                            } else {
-                              _isExpand = true;
-                            }
-                            setState(() {
-                              isMenuOpen = true;
-                            });
-                          },
-                          child: SvgPicture.asset('assets/icons/OpenArrow.svg', height: 10.h, width: 16.w)),
-                    )
-                  ],
-                ),
-                SizedBox(height: 25.h),
-                ActiveListing()
-              ],
+                        child: InkWell(
+                            onTap: () {
+                              if (_isExpand) {
+                                _isExpand = false;
+                              } else {
+                                _isExpand = true;
+                              }
+                              setState(() {
+                                isMenuOpen = true;
+                              });
+                            },
+                            child: SvgPicture.asset('assets/icons/OpenArrow.svg', height: 10.h, width: 16.w)),
+                      )
+                    ],
+                  ),
+                  SizedBox(height: 25.h),
+                  ActiveListing()
+                ],
+              ),
             ),
           )),
     );
