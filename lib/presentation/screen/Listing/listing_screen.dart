@@ -121,7 +121,13 @@ class _ListingScreenState extends State<ListingScreen> {
                         )
                       ],
                     ),
-                    SizedBox(height: 25.h),
+                    SizedBox(height: 16.h),
+                    ActiveListing(),
+                    SizedBox(height: 16.h),
+                    ActiveListing(),
+                    SizedBox(height: 16.h),
+                    ActiveListing(),
+                    SizedBox(height: 16.h),
                     ActiveListing()
                   ],
                 ),

@@ -88,6 +88,14 @@ class _ActiveListingState extends State<ActiveListing> {
               padding: 16,
             )
           ]),
+          SizedBox(height: 16.h),
+          SizedBox(
+            // width: getProportionateScreenWidth(145, WIDTH),
+            child: Divider(
+              color: Color(0xFFCCCCCC),
+              thickness: 2,
+            ),
+          ),
         ],
       ),
     );
