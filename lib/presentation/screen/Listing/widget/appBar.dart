@@ -17,9 +17,8 @@ class ListingAppBar extends StatelessWidget with PreferredSizeWidget {
         padding: const EdgeInsets.all(3),
         child: Column(
           children: [
-            SizedBox(height: 30.h),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Builder(
                   builder: (context) => InkWell(

@@ -39,17 +39,20 @@ class _ListingScreenState extends State<ListingScreen> {
                 padding: const EdgeInsets.all(20),
                 child: Column(
                   children: [
-                    Container(
-                      height: 36.h,
-                      width: 270.w,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          ListingTab(text: 'Finance'),
-                          ListingTab(text: 'Buying'),
-                          ListingTab(text: 'Messages'),
-                        ],
+                    Align(
+                      alignment: Alignment.topLeft,
+                      child: Container(
+                        height: 36.h,
+                        width: 270.w,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            ListingTab(text: 'Finance'),
+                            ListingTab(text: 'Buying'),
+                            ListingTab(text: 'Messages'),
+                          ],
+                        ),
                       ),
                     ),
                     SizedBox(height: 16.h),

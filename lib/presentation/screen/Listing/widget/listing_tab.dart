@@ -9,7 +9,7 @@ class ListingTab extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 36.h,
-      width: 80.w,
+      width: 88.w,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(32),
         color: Color(0xFFEFEFEF),
@@ -19,7 +19,7 @@ class ListingTab extends StatelessWidget {
           text,
           style: Theme.of(context).textTheme.headline1!.copyWith(
                 fontSize: 14.sp,
-                color: ColorManager.goldColor,
+                color: ColorManager.primaryColor,
               ),
           textAlign: TextAlign.center,
         ),
