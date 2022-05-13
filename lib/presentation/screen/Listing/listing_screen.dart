@@ -33,7 +33,7 @@ class _ListingScreenState extends State<ListingScreen> {
           setState(() {});
         },
         child: Scaffold(
-            appBar: ListingAppBar(text: 'Listing'),
+            appBar: ListingAppBar(text: 'Sell used items'),
             body: SingleChildScrollView(
               child: Padding(
                 padding: const EdgeInsets.all(20),

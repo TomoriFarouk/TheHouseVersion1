@@ -104,9 +104,10 @@ class _ActiveListingState extends State<ActiveListing> {
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
                           children: [
-                            ListTile(title: Text('Active Listing')),
-                            ListTile(title: Text('Draft')),
-                            ListTile(title: Text('Closed')),
+                            ListTile(title: Text('Edit')),
+                            ListTile(title: Text('Unpublish')),
+                            ListTile(title: Text('Moved to draft')),
+                            ListTile(title: Text('Delete')),
                           ],
                         ),
                       ),
