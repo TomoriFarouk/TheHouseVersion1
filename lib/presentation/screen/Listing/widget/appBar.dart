@@ -57,14 +57,6 @@ class ListingAppBar extends StatelessWidget with PreferredSizeWidget {
                 ),
               ],
             ),
-            Padding(
-              padding: EdgeInsets.symmetric(
-                vertical: 16.h,
-              ),
-              child: SearchPanel(
-                svgIcon: 'assets/icons/search-normal.svg',
-              ),
-            ),
             SizedBox(height: 10.h),
             SizedBox(
               width: MediaQuery.of(context).size.width,
