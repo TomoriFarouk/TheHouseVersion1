@@ -94,8 +94,13 @@ class _ListingScreenState extends State<ListingScreen> {
                         ),
                         child: InkWell(
                             onTap: () {
-                              setState(() {
+                              if (isMenuOpen) {
+                                isMenuOpen = false;
+                              } else {
                                 isMenuOpen = true;
+                              }
+                              setState(() {
+                                //isMenuOpen = true;
                               });
                             },
                             child: SvgPicture.asset('assets/icons/OpenArrow.svg', height: 10.h, width: 16.w)),
