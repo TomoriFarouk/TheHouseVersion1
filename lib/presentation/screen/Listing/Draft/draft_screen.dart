@@ -33,48 +33,9 @@ class _DraftScreenState extends State<DraftScreen> {
               child: Padding(
                 padding: const EdgeInsets.all(20),
                 child: Column(children: [
-                  Heading(),
-                  SizedBox(height: 24.h),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'Draft',
-                        style: Theme.of(context).textTheme.subtitle2,
-                      ),
-                      PortalTarget(
-                        visible: isMenuOpen,
-                        anchor: const Aligned(
-                          follower: Alignment.topRight,
-                          target: Alignment.topLeft,
-                        ),
-                        portalFollower: Material(
-                          elevation: 8,
-                          child: IntrinsicWidth(
-                            child: Column(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                ListTile(title: Text('Active Listing')),
-                                ListTile(title: Text('Draft')),
-                                ListTile(title: Text('Closed')),
-                              ],
-                            ),
-                          ),
-                        ),
-                        child: InkWell(
-                            onTap: () {
-                              if (isMenuOpen) {
-                                isMenuOpen = false;
-                              } else {
-                                isMenuOpen = true;
-                              }
-                              setState(() {
-                                //isMenuOpen = true;
-                              });
-                            },
-                            child: SvgPicture.asset('assets/icons/OpenArrow.svg', height: 10.h, width: 16.w)),
-                      )
-                    ],
+                  Heading(
+                    value: 2,
+                    isMenuOpen: isMenuOpen,
                   ),
                   SizedBox(height: 16.h),
                   ActiveListing(
