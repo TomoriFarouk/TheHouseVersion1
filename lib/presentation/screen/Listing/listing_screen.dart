@@ -41,18 +41,16 @@ class _ListingScreenState extends State<ListingScreen> {
                   children: [
                     Align(
                       alignment: Alignment.topLeft,
-                      child: Container(
-                        height: 36.h,
-                        width: 270.w,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            ListingTab(text: 'Finance'),
-                            ListingTab(text: 'Buying'),
-                            ListingTab(text: 'Messages'),
-                          ],
-                        ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          ListingTab(text: 'Finance'),
+                          SizedBox(width: 16.w),
+                          ListingTab(text: 'Buying'),
+                          SizedBox(width: 16.w),
+                          ListingTab(text: 'Messages'),
+                        ],
                       ),
                     ),
                     SizedBox(height: 16.h),

@@ -18,7 +18,7 @@ class ListingAppBar extends StatelessWidget with PreferredSizeWidget {
         child: Column(
           children: [
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Builder(
                   builder: (context) => InkWell(
