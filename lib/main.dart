@@ -25,27 +25,29 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (_) {
-        return MaterialApp(localizationsDelegates: [
-          GlobalMaterialLocalizations.delegate,
-          GlobalWidgetsLocalizations.delegate,
-          S.delegate
-        ], debugShowCheckedModeBanner: false, 
-        title: 'Flutter Demo', 
-        onGenerateRoute: RoutesGenerator.getRoute, 
-        theme: getApplicationTheme(),
-         home:
-         // ListingScreen()
-            //FinanceScreen(),
-            // ReviewScreen(),
-            //PaymentScreen(),
-            //AddShippingScreen(),,
+        return MaterialApp(
+          localizationsDelegates: [
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            S.delegate
+          ],
+          debugShowCheckedModeBanner: false,
+          title: 'Flutter Demo',
+          onGenerateRoute: RoutesGenerator.getRoute,
+          theme: getApplicationTheme(),
+          home:
+              // ListingScreen()
+              //FinanceScreen(),
+              // ReviewScreen(),
+              //PaymentScreen(),
+              //AddShippingScreen(),,
               IntroPage(
-             introModelList: Splash.splash.toList(),
-            // ),
-            //CartScreen(),
-            //ProductDetails(review: ProductReview.reviews.toList(),),
-            //MyHomePage(title: "false"),
-            );
+            introModelList: Splash.splash.toList(),
+          ),
+          //CartScreen(),
+          //ProductDetails(review: ProductReview.reviews.toList(),),
+          //MyHomePage(title: "false"),
+        );
       },
     );
   }
