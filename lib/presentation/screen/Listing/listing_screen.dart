@@ -57,6 +57,7 @@ class _ListingScreenState extends State<ListingScreen> {
                       textAlign: TextAlign.center,
                     ),
                   ),
+                  SizedBox(height: 24.h),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -75,8 +76,8 @@ class _ListingScreenState extends State<ListingScreen> {
                         //   },
                         // ),
                         anchor: const Aligned(
-                          follower: Alignment.topLeft,
-                          target: Alignment.topRight,
+                          follower: Alignment.topRight,
+                          target: Alignment.topLeft,
                         ),
                         portalFollower: Material(
                           elevation: 8,
