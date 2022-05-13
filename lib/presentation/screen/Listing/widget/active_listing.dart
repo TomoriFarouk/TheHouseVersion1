@@ -90,7 +90,7 @@ class _ActiveListingState extends State<ActiveListing> {
     );
   }
 
-  Widget tab({required double height, required double width, Color? color, String? text1, String? text2, Color? textColor}) {
+  Widget tab({required double width, Color? color, String? text1, String? text2, Color? textColor}) {
     return Container(
       height: 44.h,
       width: width.w,
