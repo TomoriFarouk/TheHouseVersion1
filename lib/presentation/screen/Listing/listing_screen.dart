@@ -64,14 +64,14 @@ class _ListingScreenState extends State<ListingScreen> {
                     ),
                     PortalTarget(
                       visible: isMenuOpen,
-                      portal: GestureDetector(
-                        behavior: HitTestBehavior.opaque,
-                        onTap: () {
-                          setState(() {
-                            isMenuOpen = false;
-                          });
-                        },
-                      ),
+                      // portal: GestureDetector(
+                      //   behavior: HitTestBehavior.opaque,
+                      //   onTap: () {
+                      //     setState(() {
+                      //       isMenuOpen = false;
+                      //     });
+                      //   },
+                      // ),
                       anchor: const Aligned(
                         follower: Alignment.topLeft,
                         target: Alignment.topRight,
