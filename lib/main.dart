@@ -13,9 +13,7 @@ import 'presentation/screen/screen.dart';
 import 'package:flutter_portal/flutter_portal.dart';
 
 void main() {
-  WidgetsBinding.instance?.addPostFrameCallback((_) => runApp(MyApp()));
-
-  ;
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
