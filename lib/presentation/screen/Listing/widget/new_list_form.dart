@@ -13,9 +13,9 @@ class NewListingScreen extends StatefulWidget {
 }
 
 class _NewListingScreenState extends State<NewListingScreen> {
-  late int _ratingController;
+  int _ratingController = 1;
   bool valuefirst = false;
-  String? _myActivity;
+  //String? _myActivity;
   @override
   Widget build(BuildContext context) {
     return Form(
