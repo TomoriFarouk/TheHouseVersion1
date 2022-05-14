@@ -15,6 +15,7 @@ class ActiveListing extends StatefulWidget {
 
 class _ActiveListingState extends State<ActiveListing> {
   bool isMenuOpen = false;
+
   @override
   Widget build(BuildContext context) {
     return Portal(
@@ -106,7 +107,7 @@ class _ActiveListingState extends State<ActiveListing> {
                   padding: 40,
                 ),
                 SizedBox(width: 16.w),
-                PortalEntry(
+                PortalTarget(
                     visible: isMenuOpen,
                     anchor: const Aligned(
                       follower: Alignment.topRight,
