@@ -10,6 +10,7 @@ import 'presentation/resources/resource.dart';
 import 'presentation/screen/checkout/payment/payment_screen.dart';
 import 'presentation/screen/checkout/shipping/add_shipping_details.dart';
 import 'presentation/screen/screen.dart';
+import 'package:flutter_portal/flutter_portal.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,35 +21,37 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ScreenUtilInit(
-      designSize: Size(414, 896),
-      minTextAdapt: true,
-      splitScreenMode: true,
-      builder: (_) {
-        return MaterialApp(
-          localizationsDelegates: [
-            GlobalMaterialLocalizations.delegate,
-            GlobalWidgetsLocalizations.delegate,
-            S.delegate
-          ],
-          debugShowCheckedModeBanner: false,
-          title: 'Flutter Demo',
-          onGenerateRoute: RoutesGenerator.getRoute,
-          theme: getApplicationTheme(),
-          home:
-              // ListingScreen()
-              //FinanceScreen(),
-              // ReviewScreen(),
-              //PaymentScreen(),
-              //AddShippingScreen(),,
-              IntroPage(
-            introModelList: Splash.splash.toList(),
-          ),
-          //CartScreen(),
-          //ProductDetails(review: ProductReview.reviews.toList(),),
-          //MyHomePage(title: "false"),
-        );
-      },
+    return Portal(
+      child: ScreenUtilInit(
+        designSize: Size(414, 896),
+        minTextAdapt: true,
+        splitScreenMode: true,
+        builder: (_) {
+          return MaterialApp(
+            localizationsDelegates: [
+              GlobalMaterialLocalizations.delegate,
+              GlobalWidgetsLocalizations.delegate,
+              S.delegate
+            ],
+            debugShowCheckedModeBanner: false,
+            title: 'Flutter Demo',
+            onGenerateRoute: RoutesGenerator.getRoute,
+            theme: getApplicationTheme(),
+            home:
+                // ListingScreen()
+                //FinanceScreen(),
+                // ReviewScreen(),
+                //PaymentScreen(),
+                //AddShippingScreen(),,
+                IntroPage(
+              introModelList: Splash.splash.toList(),
+            ),
+            //CartScreen(),
+            //ProductDetails(review: ProductReview.reviews.toList(),),
+            //MyHomePage(title: "false"),
+          );
+        },
+      ),
     );
   }
 }
