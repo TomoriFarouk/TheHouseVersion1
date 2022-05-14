@@ -5,7 +5,6 @@ import 'package:furniture_ui/data/generated/l10n.dart';
 import 'package:furniture_ui/domain/model/model.dart';
 import 'package:furniture_ui/presentation/screen/Listing/listing_screen.dart';
 import 'package:furniture_ui/presentation/screen/Listing/widget/active_listing.dart';
-import 'package:furniture_ui/presentation/screen/Listing/widget/new_list_form.dart';
 import 'package:furniture_ui/presentation/screen/checkout/review/reviewScreen.dart';
 import 'presentation/resources/resource.dart';
 import 'presentation/screen/checkout/payment/payment_screen.dart';
@@ -26,23 +25,29 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (_) {
-        return MaterialApp(localizationsDelegates: [
-          GlobalMaterialLocalizations.delegate,
-          GlobalWidgetsLocalizations.delegate,
-          S.delegate
-        ], debugShowCheckedModeBanner: false, title: 'Flutter Demo', onGenerateRoute: RoutesGenerator.getRoute, theme: getApplicationTheme(), home: NewListingScreen()
-            // ListingScreen()
-            //FinanceScreen(),
-            // ReviewScreen(),
-            //PaymentScreen(),
-            //AddShippingScreen(),,
-            // IntroPage(
-            //introModelList: Splash.splash.toList(),
-            //   ),
-            //CartScreen(),
-            //ProductDetails(review: ProductReview.reviews.toList(),),
-            //MyHomePage(title: "false"),
-            );
+        return MaterialApp(
+          localizationsDelegates: [
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            S.delegate
+          ],
+          debugShowCheckedModeBanner: false,
+          title: 'Flutter Demo',
+          onGenerateRoute: RoutesGenerator.getRoute,
+          theme: getApplicationTheme(),
+          home:
+              // ListingScreen()
+              //FinanceScreen(),
+              // ReviewScreen(),
+              //PaymentScreen(),
+              //AddShippingScreen(),,
+              IntroPage(
+            introModelList: Splash.splash.toList(),
+          ),
+          //CartScreen(),
+          //ProductDetails(review: ProductReview.reviews.toList(),),
+          //MyHomePage(title: "false"),
+        );
       },
     );
   }
