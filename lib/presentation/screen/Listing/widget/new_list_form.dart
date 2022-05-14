@@ -79,7 +79,7 @@ class _NewListingScreenState extends State<NewListingScreen> {
               hint: Text('Rating'),
               onChanged: (value) {
                 setState(() {
-                  _ratingController = value!;
+                  // _ratingController = value!;
                 });
               },
             ),
