@@ -44,9 +44,12 @@ class Pending extends StatelessWidget {
                 child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                   BodyText(text: '#ER766', size: 14.sp),
                   SizedBox(
-                    width: 23.w,
+                    width: 21.w,
                   ),
                   BodyText(text: 'Sep 2 -Sep 4', size: 14.sp),
+                  SizedBox(
+                    width: 20.w,
+                  ),
                   BodyText(text: '#420', size: 14.sp),
                   BodyText(text: '#420.69', size: 14.sp),
                 ]),
