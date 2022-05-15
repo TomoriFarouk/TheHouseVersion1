@@ -27,19 +27,37 @@ class _VendorAccountState extends State<VendorAccount> {
               children: [
                 InkWell(
                     onTap: () {
-                      selectedindex = 1;
+                      setState(() {
+                        selectedindex = 1;
+                      });
                     },
-                    child: tab(index: 1)),
+                    child: tab(
+                      index: 1,
+                      text1: 'Expected',
+                      text2: '#420.9',
+                    )),
                 InkWell(
                     onTap: () {
-                      selectedindex = 2;
+                      setState(() {
+                        selectedindex = 2;
+                      });
                     },
-                    child: tab(index: 2)),
+                    child: tab(
+                      index: 2,
+                      text1: 'Pending',
+                      text2: '#420.9',
+                    )),
                 InkWell(
                     onTap: () {
-                      selectedindex = 3;
+                      setState(() {
+                        selectedindex = 3;
+                      });
                     },
-                    child: tab(index: 3))
+                    child: tab(
+                      index: 3,
+                      text1: 'Available',
+                      text2: '#420.9',
+                    ))
               ],
             ),
           ],
@@ -48,7 +66,7 @@ class _VendorAccountState extends State<VendorAccount> {
     );
   }
 
-  Widget tab({int? index}) {
+  Widget tab({int? index, String? text1, String? text2}) {
     return Container(
         height: 60.h,
         width: 122.w,
@@ -58,12 +76,12 @@ class _VendorAccountState extends State<VendorAccount> {
         )),
         child: Column(
           children: [
-            BodyText(text: '', size: 12.sp),
+            BodyText(text: text1!, size: 12.sp),
             SizedBox(
               height: 4.h,
             ),
             Text(
-              '',
+              text2!,
               style: Theme.of(context).textTheme.headline1!.copyWith(
                     fontSize: 16.sp,
                     color: selectedindex == index ? ColorManager.goldColor : ColorManager.primaryColor,
