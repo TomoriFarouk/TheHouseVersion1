@@ -143,10 +143,10 @@ class _VendorSignupFormState extends State<VendorSignupForm> {
                 ),
               ),
               SizedBox(
-                height: 30.h,
+                height: 20.h,
               ),
               Padding(
-                padding: EdgeInsets.only(left: 85.w),
+                padding: EdgeInsets.only(left: 70.w),
                 child: CheckboxListTile(
                   checkColor: Colors.white,
                   title: const Text('I agree to the terms and use.'),
