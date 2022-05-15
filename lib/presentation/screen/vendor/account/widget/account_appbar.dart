@@ -14,10 +14,10 @@ class AccountAppbar extends StatelessWidget with PreferredSizeWidget {
       centerTitle: true,
       leadingWidth: 0,
       title: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           SizedBox(height: 15.h),
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               InkWell(
                 onTap: () {
