@@ -130,7 +130,8 @@ class _VendorSignupFormState extends State<VendorSignupForm> {
               SizedBox(
                 height: 40.h,
               ),
-              Center(
+              Align(
+                alignment: Alignment.topCenter,
                 child: AuthText(
                   text1: 'Have an Account?',
                   text2: 'Sign In',
@@ -140,9 +141,10 @@ class _VendorSignupFormState extends State<VendorSignupForm> {
               SizedBox(
                 height: 40.h,
               ),
-              Center(
+              Align(
+                alignment: Alignment.topCenter,
                 child: CheckboxListTile(
-                  checkColor: ColorManager.primaryColor,
+                  checkColor: Colors.white,
                   title: const Text('I agree to the terms and use.'),
                   value: this.valuefirst,
                   controlAffinity: ListTileControlAffinity.leading,
