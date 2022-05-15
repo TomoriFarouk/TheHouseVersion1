@@ -6,6 +6,7 @@ import 'package:furniture_ui/domain/model/model.dart';
 import 'package:furniture_ui/presentation/screen/Listing/listing_screen.dart';
 import 'package:furniture_ui/presentation/screen/Listing/widget/active_listing.dart';
 import 'package:furniture_ui/presentation/screen/checkout/review/reviewScreen.dart';
+import 'package:furniture_ui/presentation/screen/vendor/vendor-Auth/vendor_signup_screen.dart';
 import 'presentation/resources/resource.dart';
 import 'presentation/screen/checkout/payment/payment_screen.dart';
 import 'presentation/screen/checkout/shipping/add_shipping_details.dart';
@@ -13,6 +14,8 @@ import 'presentation/screen/screen.dart';
 import 'package:flutter_portal/flutter_portal.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+
   runApp(MyApp());
 }
 
@@ -35,15 +38,15 @@ class MyApp extends StatelessWidget {
             title: 'Flutter Demo',
             onGenerateRoute: RoutesGenerator.getRoute,
             theme: getApplicationTheme(),
-            home:
-                // ListingScreen()
-                //FinanceScreen(),
-                // ReviewScreen(),
-                //PaymentScreen(),
-                //AddShippingScreen(),,
-                IntroPage(
-              introModelList: Splash.splash.toList(),
-            ),
+            home: VendorSignupScreen(),
+            // ListingScreen()
+            //FinanceScreen(),
+            // ReviewScreen(),
+            //PaymentScreen(),
+            //AddShippingScreen(),,
+            // IntroPage(
+            // introModelList: Splash.splash.toList(),
+            // ),
             //CartScreen(),
             //ProductDetails(review: ProductReview.reviews.toList(),),
             //MyHomePage(title: "false"),
