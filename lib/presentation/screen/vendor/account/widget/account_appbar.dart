@@ -6,7 +6,6 @@ import 'package:furniture_ui/presentation/widget/widget.dart';
 class AccountAppbar extends StatelessWidget with PreferredSizeWidget {
   final String text;
   const AccountAppbar({required this.text});
-  @override
   Widget build(BuildContext context) {
     return AppBar(
       toolbarHeight: 100.h,
@@ -39,7 +38,7 @@ class AccountAppbar extends StatelessWidget with PreferredSizeWidget {
                   Navigator.of(context).pop();
                 },
                 child: SvgPicture.asset(
-                  'assets/icons/fi_more-horizontal.svg',
+                  'assets/icons/backArrow.svg',
                   height: 20.h,
                   width: 20.w,
                   //color: ColorManager.goldColor,
