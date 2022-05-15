@@ -13,7 +13,7 @@ class VendorAccount extends StatefulWidget {
 }
 
 class _VendorAccountState extends State<VendorAccount> {
-  int selectedindex = 0;
+  int selectedindex = 1;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,6 +59,24 @@ class _VendorAccountState extends State<VendorAccount> {
                       text2: '#420.9',
                     ))
               ],
+            ),
+            SizedBox(height: 24.h),
+            TitleText(text: 'Expected earnings', Size: 16.sp),
+            SizedBox(height: 24.h),
+            Text(
+              'When will i get paid?',
+              style: Theme.of(context).textTheme.headline1!.copyWith(
+                    fontSize: 16.sp,
+                    color: ColorManager.goldColor,
+                  ),
+            ),
+            SizedBox(height: 17.h),
+            SizedBox(
+              width: MediaQuery.of(context).size.width,
+              child: Divider(
+                color: Color(0xFFCCCCCC),
+                thickness: 1,
+              ),
             ),
           ],
         ),
