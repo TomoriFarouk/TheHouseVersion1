@@ -114,18 +114,22 @@ class _VendorSignupFormState extends State<VendorSignupForm> {
                 ],
               ),
               SizedBox(height: 30.h),
-              AuthButton(
-                text: 'Sign Up',
-                press: () {
-                  if (_formKey.currentState!.validate()) {
-                    _formKey.currentState!.save();
-                    // if all are valid then go to success screen
-                    //  KeyboardUtil.hideKeyboard(context);
+              SizedBox(
+                height: 56.h,
+                width: 182.w,
+                child: AuthButton(
+                  text: 'Sign Up',
+                  press: () {
+                    if (_formKey.currentState!.validate()) {
+                      _formKey.currentState!.save();
+                      // if all are valid then go to success screen
+                      //  KeyboardUtil.hideKeyboard(context);
 
-                    PrefData.setIsSignIn(true);
-                    Navigator.pushReplacementNamed(context, Routes.confirmEmailRoute);
-                  }
-                },
+                      PrefData.setIsSignIn(true);
+                      Navigator.pushReplacementNamed(context, Routes.confirmEmailRoute);
+                    }
+                  },
+                ),
               ),
               SizedBox(
                 height: 30.h,
@@ -142,7 +146,7 @@ class _VendorSignupFormState extends State<VendorSignupForm> {
                 height: 30.h,
               ),
               Padding(
-                padding: EdgeInsets.only(left: 95.w),
+                padding: EdgeInsets.only(left: 85.w),
                 child: CheckboxListTile(
                   checkColor: Colors.white,
                   title: const Text('I agree to the terms and use.'),
