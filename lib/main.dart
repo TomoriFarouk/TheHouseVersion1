@@ -13,6 +13,7 @@ import 'presentation/screen/checkout/shipping/add_shipping_details.dart';
 import 'presentation/screen/screen.dart';
 import 'package:flutter_portal/flutter_portal.dart';
 
+import 'presentation/screen/vendor/account/account_screen.dart';
 import 'presentation/screen/vendor/review/review_screen.dart';
 
 void main() {
@@ -40,7 +41,8 @@ class MyApp extends StatelessWidget {
             title: 'Flutter Demo',
             onGenerateRoute: RoutesGenerator.getRoute,
             theme: getApplicationTheme(),
-            home: ReviewsScreen(),
+            home: VendorAccount(),
+            //ReviewsScreen(),
             //VendorSignupScreen(),
             // ListingScreen()
             //FinanceScreen(),
