@@ -24,6 +24,7 @@ class ProgressBar extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -37,6 +38,7 @@ class ProgressBar extends StatelessWidget {
               ],
             ),
             Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -50,6 +52,7 @@ class ProgressBar extends StatelessWidget {
               ],
             ),
             Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -63,6 +66,7 @@ class ProgressBar extends StatelessWidget {
               ],
             ),
             Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 activeCircle(text: '4', color: color4),
                 SizedBox(height: 14.h),
