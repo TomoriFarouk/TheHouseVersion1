@@ -28,121 +28,134 @@ class _VendorSignupFormState extends State<VendorSignupForm> {
 
   @override
   Widget build(BuildContext context) {
-    return Form(
-        key: _formKey,
-        child: Column(
-          children: [
-            Column(
-              children: [
-                TitleText(text: 'Fullname', Size: 14.sp),
-                SizedBox(
-                  height: 14.h,
-                ),
-                buildFullNameFormField(),
-              ],
-            ),
-            SizedBox(
-              height: 16.h,
-            ),
-            Column(
-              children: [
-                TitleText(text: 'Email', Size: 14.sp),
-                SizedBox(
-                  height: 14.h,
-                ),
-                buildEmailFormField(),
-              ],
-            ),
-            SizedBox(
-              height: 16.h,
-            ),
-            Column(
-              children: [
-                TitleText(text: 'Phonenumber', Size: 14.sp),
-                SizedBox(
-                  height: 14.h,
-                ),
-                buildPHNumberFormField(),
-              ],
-            ),
-            SizedBox(
-              height: 16.h,
-            ),
-            Column(
-              children: [
-                TitleText(text: 'Address', Size: 14.sp),
-                SizedBox(
-                  height: 14.h,
-                ),
-                buildAddressFormField(),
-              ],
-            ),
-            SizedBox(
-              height: 16.h,
-            ),
-            Column(
-              children: [
-                TitleText(text: 'Password', Size: 14.sp),
-                SizedBox(
-                  height: 14.h,
-                ),
-                buildPasswordFormField(),
-              ],
-            ),
-            SizedBox(
-              height: 16.h,
-            ),
-            Column(
-              children: [
-                TitleText(text: 'Confirm Password', Size: 14.sp),
-                SizedBox(
-                  height: 14.h,
-                ),
-                buildPasswordFormField(),
-              ],
-            ),
-            SizedBox(height: 30.h),
-            AuthButton(
-              text: 'Sign Up',
-              press: () {
-                if (_formKey.currentState!.validate()) {
-                  _formKey.currentState!.save();
-                  // if all are valid then go to success screen
-                  //  KeyboardUtil.hideKeyboard(context);
-
-                  PrefData.setIsSignIn(true);
-                  Navigator.pushReplacementNamed(context, Routes.confirmEmailRoute);
-                }
-              },
-            ),
-            SizedBox(
-              height: 40.h,
-            ),
-            Center(
-              child: AuthText(
-                text1: 'Have an Account?',
-                text2: 'Sign In',
-                routeUrl: Routes.confirmEmailRoute,
+    return Padding(
+      padding: EdgeInsets.only(
+        left: 24.w,
+        right: 24.w,
+      ),
+      child: Form(
+          key: _formKey,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  TitleText(text: 'Fullname', Size: 14.sp),
+                  SizedBox(
+                    height: 14.h,
+                  ),
+                  buildFullNameFormField(),
+                ],
               ),
-            ),
-            SizedBox(
-              height: 40.h,
-            ),
-            Center(
-              child: CheckboxListTile(
-                checkColor: ColorManager.primaryColor,
-                title: const Text('I agree to the terms and use.'),
-                value: this.valuefirst,
-                controlAffinity: ListTileControlAffinity.leading,
-                onChanged: (value) {
-                  setState(() {
-                    this.valuefirst = value!;
-                  });
+              SizedBox(
+                height: 16.h,
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  TitleText(text: 'Email', Size: 14.sp),
+                  SizedBox(
+                    height: 14.h,
+                  ),
+                  buildEmailFormField(),
+                ],
+              ),
+              SizedBox(
+                height: 16.h,
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  TitleText(text: 'Phonenumber', Size: 14.sp),
+                  SizedBox(
+                    height: 14.h,
+                  ),
+                  buildPHNumberFormField(),
+                ],
+              ),
+              SizedBox(
+                height: 16.h,
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  TitleText(text: 'Address', Size: 14.sp),
+                  SizedBox(
+                    height: 14.h,
+                  ),
+                  buildAddressFormField(),
+                ],
+              ),
+              SizedBox(
+                height: 16.h,
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  TitleText(text: 'Password', Size: 14.sp),
+                  SizedBox(
+                    height: 14.h,
+                  ),
+                  buildPasswordFormField(),
+                ],
+              ),
+              SizedBox(
+                height: 16.h,
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  TitleText(text: 'Confirm Password', Size: 14.sp),
+                  SizedBox(
+                    height: 14.h,
+                  ),
+                  buildPasswordFormField(),
+                ],
+              ),
+              SizedBox(height: 30.h),
+              AuthButton(
+                text: 'Sign Up',
+                press: () {
+                  if (_formKey.currentState!.validate()) {
+                    _formKey.currentState!.save();
+                    // if all are valid then go to success screen
+                    //  KeyboardUtil.hideKeyboard(context);
+
+                    PrefData.setIsSignIn(true);
+                    Navigator.pushReplacementNamed(context, Routes.confirmEmailRoute);
+                  }
                 },
               ),
-            ),
-          ],
-        ));
+              SizedBox(
+                height: 40.h,
+              ),
+              Center(
+                child: AuthText(
+                  text1: 'Have an Account?',
+                  text2: 'Sign In',
+                  routeUrl: Routes.confirmEmailRoute,
+                ),
+              ),
+              SizedBox(
+                height: 40.h,
+              ),
+              Center(
+                child: CheckboxListTile(
+                  checkColor: ColorManager.primaryColor,
+                  title: const Text('I agree to the terms and use.'),
+                  value: this.valuefirst,
+                  controlAffinity: ListTileControlAffinity.leading,
+                  onChanged: (value) {
+                    setState(() {
+                      this.valuefirst = value!;
+                    });
+                  },
+                ),
+              ),
+            ],
+          )),
+    );
   }
 
   TextFormField buildEmailFormField() {

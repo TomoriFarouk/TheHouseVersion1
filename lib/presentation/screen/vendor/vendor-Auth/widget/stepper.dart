@@ -16,8 +16,8 @@ class ProgressBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(
-        left: 30.w,
-        right: 30.w,
+        left: 24.w,
+        right: 24.w,
       ),
       child: Container(
         child: Row(
@@ -25,28 +25,43 @@ class ProgressBar extends StatelessWidget {
           children: [
             Column(
               children: [
-                activeCircle(text: '1', color: ColorManager.goldColor),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    activeCircle(text: '1', color: ColorManager.goldColor),
+                    divider(color: color2),
+                  ],
+                ),
                 SizedBox(height: 14.h),
                 TitleText(text: 'Sign Up', Size: 14.sp)
               ],
             ),
-            divider(color: color2),
             Column(
               children: [
-                activeCircle(text: '2', color: color2),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    activeCircle(text: '2', color: color2),
+                    divider(color: color3),
+                  ],
+                ),
                 SizedBox(height: 14.h),
                 TitleText(text: 'Job Info', Size: 14.sp)
               ],
             ),
-            divider(color: color3),
             Column(
               children: [
-                activeCircle(text: '3', color: color3),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    activeCircle(text: '3', color: color3),
+                    divider(color: color4),
+                  ],
+                ),
                 SizedBox(height: 14.h),
                 TitleText(text: 'License', Size: 14.sp)
               ],
             ),
-            divider(color: color4),
             Column(
               children: [
                 activeCircle(text: '4', color: color4),
@@ -72,7 +87,7 @@ class ProgressBar extends StatelessWidget {
 
   Widget divider({Color? color}) {
     return SizedBox(
-      width: 145.w,
+      width: 46.w,
       child: Divider(
         color: color,
         thickness: 1,
