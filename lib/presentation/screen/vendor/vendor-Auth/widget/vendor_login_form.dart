@@ -41,19 +41,6 @@ class _VendorSignupFormState extends State<VendorSignupForm> {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  TitleText(text: 'Fullname', Size: 14.sp),
-                  SizedBox(
-                    height: 14.h,
-                  ),
-                  buildFullNameFormField(),
-                ],
-              ),
-              SizedBox(
-                height: 16.h,
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
                   TitleText(text: 'Email', Size: 14.sp),
                   SizedBox(
                     height: 14.h,
@@ -67,50 +54,18 @@ class _VendorSignupFormState extends State<VendorSignupForm> {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  TitleText(text: 'Phonenumber', Size: 14.sp),
-                  SizedBox(
-                    height: 14.h,
-                  ),
-                  buildPHNumberFormField(),
-                ],
-              ),
-              SizedBox(
-                height: 16.h,
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  TitleText(text: 'Address', Size: 14.sp),
-                  SizedBox(
-                    height: 14.h,
-                  ),
-                  buildAddressFormField(),
-                ],
-              ),
-              SizedBox(
-                height: 16.h,
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
                   TitleText(text: 'Password', Size: 14.sp),
                   SizedBox(
                     height: 14.h,
                   ),
                   buildPasswordFormField(),
-                ],
-              ),
-              SizedBox(
-                height: 16.h,
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  TitleText(text: 'Confirm Password', Size: 14.sp),
                   SizedBox(
                     height: 14.h,
                   ),
-                  buildPasswordFormField(),
+                  TitleText(
+                    Size: 14.sp,
+                    text: 'Forgot password?',
+                  )
                 ],
               ),
               SizedBox(height: 30.h),
@@ -118,7 +73,7 @@ class _VendorSignupFormState extends State<VendorSignupForm> {
                 height: 56.h,
                 width: 182.w,
                 child: AuthButton(
-                  text: 'Sign Up',
+                  text: 'Sign In',
                   press: () {
                     if (_formKey.currentState!.validate()) {
                       _formKey.currentState!.save();
@@ -135,30 +90,11 @@ class _VendorSignupFormState extends State<VendorSignupForm> {
                 height: 30.h,
               ),
               Padding(
-                padding: EdgeInsets.only(left: 121.w),
-                child: AuthText(
-                  text1: 'Have an Account?',
-                  text2: 'Sign In',
-                  routeUrl: Routes.confirmEmailRoute,
-                ),
-              ),
-              SizedBox(
-                height: 10.h,
-              ),
-              Padding(
-                padding: EdgeInsets.only(left: 60.w),
-                child: CheckboxListTile(
-                  checkColor: Colors.white,
-                  title: const Text('I agree to the terms and use.'),
-                  value: this.valuefirst,
-                  controlAffinity: ListTileControlAffinity.leading,
-                  onChanged: (value) {
-                    setState(() {
-                      this.valuefirst = value!;
-                    });
-                  },
-                ),
-              ),
+                  padding: EdgeInsets.only(left: 121.w),
+                  child: TitleText(
+                    Size: 14.sp,
+                    text: 'Resgister to provide services',
+                  )),
             ],
           )),
     );
@@ -211,72 +147,6 @@ class _VendorSignupFormState extends State<VendorSignupForm> {
           return "";
         } else if (value.length < 8) {
           addError(error: kShortPassError);
-          return "";
-        }
-        return null;
-      },
-      decoration: InputDecoration(
-        labelText: '',
-        hintText: '',
-      ),
-    );
-  }
-
-  TextFormField buildFullNameFormField() {
-    return TextFormField(
-      keyboardType: TextInputType.text,
-      // onSaved: (newValue) => email = newValue,
-      onChanged: (value) {
-        if (value.isNotEmpty) {
-          removeError(error: kEmailNullError);
-        }
-        return null;
-      },
-      validator: (value) {
-        if (value!.isEmpty) {
-          addError(error: kEmailNullError);
-          return "";
-        }
-        return null;
-      },
-      decoration: InputDecoration(labelText: '', hintText: ''),
-    );
-  }
-
-  TextFormField buildAddressFormField() {
-    return TextFormField(
-      keyboardType: TextInputType.text,
-      // onSaved: (newValue) => email = newValue,
-      onChanged: (value) {
-        if (value.isNotEmpty) {
-          removeError(error: kEmailNullError);
-        }
-        return null;
-      },
-      validator: (value) {
-        if (value!.isEmpty) {
-          addError(error: kEmailNullError);
-          return "";
-        }
-        return null;
-      },
-      decoration: InputDecoration(labelText: '', hintText: ''),
-    );
-  }
-
-  TextFormField buildPHNumberFormField() {
-    return TextFormField(
-      keyboardType: TextInputType.phone,
-      // onSaved: (newValue) => email = newValue,
-      onChanged: (value) {
-        if (value.isNotEmpty) {
-          removeError(error: kEmailNullError);
-        }
-        return null;
-      },
-      validator: (value) {
-        if (value!.isEmpty) {
-          addError(error: kEmailNullError);
           return "";
         }
         return null;
