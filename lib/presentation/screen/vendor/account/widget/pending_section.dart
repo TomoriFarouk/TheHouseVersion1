@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:furniture_ui/presentation/widget/title_text.dart';
 import 'package:furniture_ui/presentation/widget/widget.dart';
 
-class Expected extends StatelessWidget {
-  const Expected({Key? key}) : super(key: key);
+class Pending extends StatelessWidget {
+  const Pending({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -32,7 +32,8 @@ class Expected extends StatelessWidget {
               child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                 TitleText(text: 'Plumber needed', Size: 16.sp),
                 TitleText(text: 'Date', Size: 16.sp),
-                TitleText(text: 'Budget', Size: 16.sp),
+                TitleText(text: 'Service fee', Size: 16.sp),
+                TitleText(text: 'Balance', Size: 16.sp),
               ]),
             ),
             SizedBox(
@@ -42,10 +43,8 @@ class Expected extends StatelessWidget {
               width: 366.w,
               child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                 BodyText(text: '#ER766', size: 16.sp),
-                SizedBox(
-                  width: 23.w,
-                ),
                 BodyText(text: 'Sep 2 - Present', size: 16.sp),
+                BodyText(text: '#420.69', size: 16.sp),
                 BodyText(text: '#420.69', size: 16.sp),
               ]),
             ),
