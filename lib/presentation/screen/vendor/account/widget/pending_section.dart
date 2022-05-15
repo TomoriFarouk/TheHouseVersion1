@@ -30,10 +30,10 @@ class Pending extends StatelessWidget {
             SizedBox(
               width: 366.w,
               child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                TitleText(text: 'Plumber needed', Size: 16.sp),
-                TitleText(text: 'Date', Size: 16.sp),
-                TitleText(text: 'Service fee', Size: 16.sp),
-                TitleText(text: 'Balance', Size: 16.sp),
+                TitleText(text: 'Plumber needed', Size: 14.sp),
+                TitleText(text: 'Date', Size: 14.sp),
+                TitleText(text: 'Service fee', Size: 14.sp),
+                TitleText(text: 'Balance', Size: 14.sp),
               ]),
             ),
             SizedBox(
@@ -42,10 +42,10 @@ class Pending extends StatelessWidget {
             SizedBox(
               width: 366.w,
               child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                BodyText(text: '#ER766', size: 16.sp),
-                BodyText(text: 'Sep 2 - Present', size: 16.sp),
-                BodyText(text: '#420.69', size: 16.sp),
-                BodyText(text: '#420.69', size: 16.sp),
+                BodyText(text: '#ER766', size: 14.sp),
+                BodyText(text: 'Sep 2 - Present', size: 14.sp),
+                BodyText(text: '#420.69', size: 14.sp),
+                BodyText(text: '#420.69', size: 14.sp),
               ]),
             ),
           ],
