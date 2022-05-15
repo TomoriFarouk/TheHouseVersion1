@@ -42,10 +42,10 @@ class Expected extends StatelessWidget {
               width: 366.w,
               child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                 BodyText(text: '#ER766', size: 16.sp),
-                BodyText(text: 'Sep 2 - Present', size: 16.sp),
                 SizedBox(
                   width: 20.w,
                 ),
+                BodyText(text: 'Sep 2 - Present', size: 16.sp),
                 BodyText(text: '#420.69', size: 16.sp),
               ]),
             ),
