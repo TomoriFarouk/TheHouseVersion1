@@ -13,7 +13,7 @@ class AuthButton extends StatelessWidget {
         elevation: 0,
         //    shadowColor: Colors.greenAccent,
         //   elevation: 3,
-        minimumSize: Size(366.w, 56.h), //////// HERE
+        //minimumSize: Size(366.w, 56.h), //////// HERE
       ),
       child: Text(
         text,

@@ -128,7 +128,7 @@ class _VendorSignupFormState extends State<VendorSignupForm> {
                 },
               ),
               SizedBox(
-                height: 40.h,
+                height: 30.h,
               ),
               Padding(
                 padding: EdgeInsets.only(left: 121.w),
@@ -139,7 +139,7 @@ class _VendorSignupFormState extends State<VendorSignupForm> {
                 ),
               ),
               SizedBox(
-                height: 40.h,
+                height: 30.h,
               ),
               Padding(
                 padding: EdgeInsets.only(left: 95.w),
