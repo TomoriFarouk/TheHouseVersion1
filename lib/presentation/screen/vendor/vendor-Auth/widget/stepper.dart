@@ -51,7 +51,7 @@ class ProgressBar extends StatelessWidget {
                 ),
                 SizedBox(height: 14.h),
                 Padding(
-                  padding: EdgeInsets.only(right: 40.w)
+                  padding: EdgeInsets.only(right: 40.w),
                   child: TitleText(text: 'Job Info', Size: 14.sp),
                 )
               ],
