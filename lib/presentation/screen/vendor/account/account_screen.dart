@@ -3,6 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:furniture_ui/presentation/resources/ConstantData.dart';
 import 'package:furniture_ui/presentation/screen/vendor/account/widget/account_appbar.dart';
+import 'package:furniture_ui/presentation/screen/vendor/account/widget/expected_section.dart';
 import 'package:furniture_ui/presentation/widget/widget.dart';
 
 class VendorAccount extends StatefulWidget {
@@ -79,6 +80,7 @@ class _VendorAccountState extends State<VendorAccount> {
                 thickness: 1,
               ),
             ),
+            Expected(),
           ],
         ),
       )),
