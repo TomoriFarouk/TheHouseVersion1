@@ -22,6 +22,7 @@ class _VendorAccountState extends State<VendorAccount> {
           child: Padding(
         padding: EdgeInsets.only(left: 25.w),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
               children: [
