@@ -28,7 +28,7 @@ class ReviewsScreen extends StatelessWidget {
                   SizedBox(height: 16.h),
                   SizedBox(
                     height: 72.h,
-                    width: 260.w,
+                    width: 255.w,
                     child: BodyText(
                       text: 'We have recieved your application and will review it shortly.We will get back to you via email and let you know the next steps',
                       size: 14.sp,
