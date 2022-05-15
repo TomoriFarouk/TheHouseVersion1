@@ -24,7 +24,6 @@ class ProgressBar extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -34,7 +33,7 @@ class ProgressBar extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: 14.h),
-                TitleText(text: 'Sign Up', Size: 14.sp)
+                Align(alignment: Alignment.topLeft, child: TitleText(text: 'Sign Up', Size: 14.sp))
               ],
             ),
             Column(
