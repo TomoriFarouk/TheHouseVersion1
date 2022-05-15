@@ -49,7 +49,7 @@ class Pending extends StatelessWidget {
                   BodyText(text: 'Sep 2 -Sep 4', size: 14.sp),
                   BodyText(text: '#420', size: 14.sp),
                   SizedBox(
-                    width: 20.w,
+                    width: 15.w,
                   ),
                   BodyText(text: '#420.69', size: 14.sp),
                 ]),
