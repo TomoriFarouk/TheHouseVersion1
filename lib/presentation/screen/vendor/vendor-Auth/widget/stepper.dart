@@ -16,7 +16,7 @@ class ProgressBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(
-        left: 30.5.w,
+        left: 50.5.w,
         // right: 50.5.w,
       ),
       child: Container(
