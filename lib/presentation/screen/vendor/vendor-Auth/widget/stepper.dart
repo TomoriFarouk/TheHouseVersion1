@@ -34,7 +34,7 @@ class ProgressBar extends StatelessWidget {
                 ),
                 SizedBox(height: 14.h),
                 Padding(
-                  padding: EdgeInsets.only(right: 30.w),
+                  padding: EdgeInsets.only(right: 40.w),
                   child: TitleText(text: 'Sign Up', Size: 14.sp),
                 )
               ],
@@ -50,7 +50,10 @@ class ProgressBar extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: 14.h),
-                TitleText(text: 'Job Info', Size: 14.sp)
+                Padding(
+                  padding: EdgeInsets.only(right: 40.w)
+                  child: TitleText(text: 'Job Info', Size: 14.sp),
+                )
               ],
             ),
             Column(
