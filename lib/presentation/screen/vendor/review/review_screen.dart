@@ -27,7 +27,7 @@ class ReviewsScreen extends StatelessWidget {
                   TitleText(text: 'Your application is recieved', Size: 14.sp),
                   SizedBox(height: 16.h),
                   SizedBox(
-                    height: 72.h,
+                    height: 75.h,
                     width: 255.w,
                     child: BodyText(
                       text: 'We have recieved your application and will review it shortly.We will get back to you via email and let you know the next steps',
