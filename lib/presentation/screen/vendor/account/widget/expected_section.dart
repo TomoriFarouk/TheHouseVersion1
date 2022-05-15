@@ -31,9 +31,6 @@ class Expected extends StatelessWidget {
               width: 366.w,
               child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                 TitleText(text: 'Plumber needed', Size: 16.sp),
-                SizedBox(
-                  width: 25.w,
-                ),
                 TitleText(text: 'Date', Size: 16.sp),
                 TitleText(text: 'Budget', Size: 16.sp),
               ]),
@@ -46,6 +43,9 @@ class Expected extends StatelessWidget {
               child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                 BodyText(text: '#ER766', size: 16.sp),
                 BodyText(text: 'Sep 2 - Present', size: 16.sp),
+                SizedBox(
+                  width: 20.w,
+                ),
                 BodyText(text: '#420.69', size: 16.sp),
               ]),
             ),
