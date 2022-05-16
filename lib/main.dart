@@ -43,16 +43,16 @@ class MyApp extends StatelessWidget {
             theme: getApplicationTheme(),
             home:
                 //VendorAccount(),
-                ReviewsScreen(),
-            // VendorSignupScreen(),
-            // ListingScreen()
-            //FinanceScreen(),
-            // ReviewScreen(),
-            //PaymentScreen(),
-            //AddShippingScreen(),,
-            //  IntroPage(
-            // introModelList: Splash.splash.toList(),
-            // ),
+                // ReviewsScreen(),
+                // VendorSignupScreen(),
+                // ListingScreen()
+                //FinanceScreen(),
+                // ReviewScreen(),
+                //PaymentScreen(),
+                //AddShippingScreen(),,
+                IntroPage(
+              introModelList: Splash.splash.toList(),
+            ),
             //CartScreen(),
             //ProductDetails(review: ProductReview.reviews.toList(),),
             //MyHomePage(title: "false"),
