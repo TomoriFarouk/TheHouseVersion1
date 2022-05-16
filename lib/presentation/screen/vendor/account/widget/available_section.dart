@@ -35,7 +35,7 @@ class Available extends StatelessWidget {
             minimumSize: Size(366.w, 56.h), //////// HERE
           ),
           child: Padding(
-            padding: EdgeInsets.only(left: 80.w),
+            padding: EdgeInsets.only(left: 113.w),
             child: Row(
               children: [
                 SvgPicture.asset(
@@ -69,14 +69,14 @@ class Available extends StatelessWidget {
             minimumSize: Size(366.w, 56.h), //////// HERE
           ),
           child: Padding(
-            padding: EdgeInsets.only(left: 80.w),
+            padding: EdgeInsets.only(left: 133.w),
             child: Row(
               children: [
                 SvgPicture.asset(
                   'assets/icons/Paypal.svg',
                   height: 20.h,
                   width: 20.w,
-                  color: ColorManager.goldColor,
+                  //color: ColorManager.goldColor,
                 ),
                 SizedBox(width: 18.w),
                 Text(
@@ -103,7 +103,7 @@ class Available extends StatelessWidget {
             minimumSize: Size(366.w, 56.h), //////// HERE
           ),
           child: Padding(
-            padding: EdgeInsets.only(left: 80.w),
+            padding: EdgeInsets.only(left: 146.w),
             child: Row(
               children: [
                 SizedBox(width: 18.w),
