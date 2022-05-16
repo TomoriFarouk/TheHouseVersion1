@@ -41,17 +41,18 @@ class MyApp extends StatelessWidget {
             title: 'Flutter Demo',
             onGenerateRoute: RoutesGenerator.getRoute,
             theme: getApplicationTheme(),
-            home: VendorAccount(),
-            //ReviewsScreen(),
-            //VendorSignupScreen(),
-            // ListingScreen()
-            //FinanceScreen(),
-            // ReviewScreen(),
-            //PaymentScreen(),
-            //AddShippingScreen(),,
-            // IntroPage(
-            // introModelList: Splash.splash.toList(),
-            // ),
+            home:
+                //VendorAccount(),
+                //ReviewsScreen(),
+                //VendorSignupScreen(),
+                // ListingScreen()
+                //FinanceScreen(),
+                // ReviewScreen(),
+                //PaymentScreen(),
+                //AddShippingScreen(),,
+                IntroPage(
+              introModelList: Splash.splash.toList(),
+            ),
             //CartScreen(),
             //ProductDetails(review: ProductReview.reviews.toList(),),
             //MyHomePage(title: "false"),
